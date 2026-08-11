@@ -2,7 +2,7 @@
 
 Web guide link: https://webexcc-sa.github.io/LAB-21177/
 
-
+ 
 ## DOCX to Markdown script
 
 Use `scripts/docx_to_markdown.py` to convert a DOCX lab guide into markdown files.
