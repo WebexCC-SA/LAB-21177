@@ -10,9 +10,28 @@ Please use the following credentials to connect to Control Hub and configure Web
 
 ## Objective 
 
-In this lab exercise, the audience will gain hands-on experience configuring WxCC solutions to enable outdial capabilities from scratch. Furthermore, the exercise will also equip participants with essential debugging skills to identify and rectify frequent implementation errors ensuring a robust and functional deployment.
+In this lab exercise, 
+## Section 1 : Review Skills, Profiles, and Agent Entitlements 
 
-## Section 1 : Setup Outdial 
+**Verify Pre-created Skills:**
+
+- Log into [Webex Control Hub](https://admin.webex.com) with the provided credentials.
+  
+-  From the left navigation sidebar, go to **Services** and select **Contact Center**.
+
+- Navigate to **Customer Experience** > **Skill Management**.
+  
+- On the **Skills** tab, locate the following pre-created skills:
+	* `WebexOne__Spanish_Fluency`
+	* `WebexOne_VIP_Support`
+
+- Review each skill's parameters against the baseline configuration table below:
+
+| Skill Name | Expected Skill Type |
+| --- | --- |
+| `WebexOne__Spanish_Fluency` | Proficiency |
+| `WebexOne_VIP_Support` | Boolean |
+
 
 - Log into [Webex Control Hub](https://admin.webex.com) with the provided credentials.
 
