@@ -89,9 +89,11 @@ nav:
   - Welcome: welcome.md
   - Lab:
       - Overview: overview.md
-      - Lab 1 - Getting Started: lab1_getting_started.md
+      - Lab 1 - Configure and Debug Inbound Call Flows : Excercise1.md
+      - Lab 2 - Setup Seamless Call Transfer : Excercise2.md
+      - Lab 3 - Set Up Outdial Calls : Excercise3.md
+      - Lab 4 - [Bonus] Webrtc Troubleshooting : Excercise4.md
       - Conclusion: conclusion.md
-  - Topologies: topologies.md
   - How to use this guide:
       - Setting up and using the tool:
         - Initial Setup: howToUse/initialSetup.md
