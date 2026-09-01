@@ -67,7 +67,32 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 - Under **Skill profile Settings**, confirm that the **Skill Profile** field explicitly displays `WebexOne_Spanish_Specialist`.
 
+## Section 2 : Implement Skill-Based Routing (SBR) in Flow 
+
+**Duplicate and Open the Flow Template**
+
+* **Step 1:** An incoming call enters via the Entry Point and triggers the **Menu** node.
   
+* **Step 2:** The customer hears an IVR greeting and is prompted to make a selection:
+	* **Option 0:** Triggers a **Set Variable** node that assigns flow variable `Webexone_SPanish_FV = 5` and `Webexone_VIPCustomer_FV = True` to the call context.
+	* **Option 1:** Triggers a **Set Variable** node that assigns flow variable `Webexone_SPanish_FV = 3` and `Webexone_VIPCustomer_FV = False` to the call context.
+
+* **Step 3:** The call routes to the **Queue** node, where an appropriately skilled agent is selected based on the skill requirement conditions evaluated at the queue level.
+
+
+
+- In **Control Hub**, navigate to **Services** > **Contact Center**, then select **Flows** from the **Customer Experience** section.
+
+- In the **Flows** list, search for `webexOne_Skill_Flow_Template` using the search bar.
+
+- Hover over the row for `webexOne_Skill_Flow_Template` and click the **Ellipsis (...)** icon on the right side.
+
+- Select **Copy**.
+
+- A new flow with the default name `Copy_webexOne_Skill_Flow_Template_<id>` will be generated.
+
+- Click the newly created flow row to open it in **Flow Designer**.
+
 
 - Log into [Webex Control Hub](https://admin.webex.com) with the provided credentials.
 
