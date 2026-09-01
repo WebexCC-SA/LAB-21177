@@ -79,8 +79,85 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 * **Step 3:** The call routes to the **Queue** node, where an appropriately skilled agent is selected based on the skill requirement conditions evaluated at the queue level.
 
+**Identify Required Flow Updates**
+
+- To test Skill-Based Routing (SBR) with this flow, you will make two specific updates:
+
+	- **Update 1**: **Queue Assignment:** Assign the designated Contact Center queue to the **Queue** node.
+	- **Update 2**: **Skill Configuration:** Define the required skill conditions in the **Skill Requirement** section of the **Queue** node.
+
+**Update 1 : Create the Skill-Based Queue**
+
+- For **Queue Assignement** lets create a skill based Queue and assign the contact center agent to the Queue, to configure 
+
+- In the **Contact Center** navigation pane, select **Queues** under the **Customer Experience** section.
+
+- Click the **Create Queue** button.
+
+- Configure the general queue settings using the table below:
+
+| Field Name | Value / Setting | Description |
+| --- | --- | --- |
+| **Queue Name** | `WebexOne_SBR_Queue_[name]`
+| **Contact Direction** | **Inbound Queue** | 
+| **Channel Type** | **Telephony** | 
+
+- Scroll to **Contact Routing Settings**, enable **Skill-Based Routing**, and configure the following:
+	* **Skill Assignment Type:** Select **Assign skills in flows**.
+	* **Agent Assignment:** Select **Teams**.
+	* **Routing Pattern:** Select **Longest Available**.
+
+- Under **Call Distribution**, create a new group and add your designated team: `WebexOne_Team_[num]`.
+
+- Scroll to **Advanced Settings** and verify the following parameters:
+	* **Service Level Threshold:** `30` seconds
+	* **Maximum Time in Queue:** `30` seconds
+	* **Default Music in Queue:** `defaultmusic_on_hold.wav`
 
 
+- Click **Save** to finalize and create the queue.
+
+**Update 2: Update the Flow with Queue and Skill Requirements**
+
+- Return to **Flows** section  and click your newly created flow row **Copy_webexOne_Skill_Flow_Template_<id>** to open it in **Flow Designer**.
+
+- Click **Edit**  to modify the flow.
+
+- Click the **Queue Contact** node on the canvas to open its properties panel.
+
+- Under **Queue Settings**, select **Static Queue** and choose your newly created queue: `WebexOne_SBR_Queue_[name]`.
+
+- Under the **Skill Requirements** section, click **Add Skill** and configure the two static skill requirements:
+
+#### Skill 1 Configuration
+	* **Skill Name:** Static > `WebexOne__Spanish_Fluency`
+	* **Condition:** Static > `>=`
+	* **Value:** Static > `5`
+
+#### Skill 2 Configuration
+	* **Skill Name:** Static > `WebexOne_VIP_Support`
+	* **Value:** Static > `True`
+
+**Validate and Publish the Flow**
+
+- Click **Validate** in the bottom right menu bar and ensure no error messages appear.
+
+- Click **Publish** to make the flow active for routing.
+
+
+- To route incoming calls to your newly defined skill-based agents, the published flow must be mapped to an inbound entry point channel, to configure 
+
+- In **Control Hub**, navigate to **Services** > **Contact Center**, then select **Channels** under the **Customer Experience** section.
+
+- In the **Channels** list, search for the channel created in **Lab 1**.
+
+- Select the channel to open its configuration settings.
+
+- Under **Entry Point Settings**, navigate to the **Routing Flow** dropdown menu and select the published flow configured in the previous exercise (`webexOne_Skill_Flow_<Name>`).
+
+- Click **Save** to apply the changes.
+
+-------------------
 - In **Control Hub**, navigate to **Services** > **Contact Center**, then select **Flows** from the **Customer Experience** section.
 
 - In the **Flows** list, search for `webexOne_Skill_Flow_Template` using the search bar.
