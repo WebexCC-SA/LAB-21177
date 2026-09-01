@@ -32,6 +32,42 @@ In this lab exercise,
 | `WebexOne__Spanish_Fluency` | Proficiency |
 | `WebexOne_VIP_Support` | Boolean |
 
+**Verify the Skill Profile:**
+
+A **Skill Profile** acts as a container grouping multiple skills together so you can assign them to agents at once.
+
+- In **Contact Center**, go to **User Management** > **Skill Profile**.
+
+- Locate `WebexOne_Spanish_Specialist` in the **Skill Profiles** list.
+
+- Select its row to open the configuration details panel.
+
+- Under the **Active Skills** section, confirm that the settings match the table below:
+
+| Skill Name | Skill Type | Skilled Value | Description |
+| --- | --- | --- | --- |
+| `WebexOne__Spanish_Fluency` | PROFICIENCY | 5 | Medium-high Spanish speaking capability |
+| `WebexOne_VIP_Support` | BOOLEAN | True | Entitled to receive VIP-routed calls |
+
+**Assign the Skill Profile to a User:**
+
+- From the left navigation sidebar, select **User Management** > **Contact Center Users**.
+
+- In the search bar, enter your lab user ID (`labuser<num>@wx1.wbx.ai`) and press **Enter**.
+
+- Select the user row to open the user details side panel.
+
+- Go to the **Agent Settings** section and select `WebexOne_Spanish_Specialist` from the **Skill profile** drop-down menu.
+
+- Select **Save** to apply your changes.
+
+**Validate the Assignment:**
+
+- Re-open the user details panel for `labuser<num>@wx1.wbx.ai`.
+
+- Under **Skill profile Settings**, confirm that the **Skill Profile** field explicitly displays `WebexOne_Spanish_Specialist`.
+
+  
 
 - Log into [Webex Control Hub](https://admin.webex.com) with the provided credentials.
 
