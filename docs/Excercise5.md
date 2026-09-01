@@ -1,4 +1,4 @@
-# Lab 3 -  Set Up Outdial Calls in WxCC
+# Lab 5 -  Set Up Outdial Calls in WxCC
 
 Please use the following credentials to connect to Control Hub and configure Webex Contact Center:
 
