@@ -238,4 +238,4 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 - Dial your assigned Dialed Number again and press Option 0.
 
 - **Result**: The call evaluates Spanish >= 5 and VIP = True. The call will successfully route and present to the logged-in agent!
-- **Result**: The call evaluates Spanish >= 5 and VIP = True. The call will successfully route and present to the logged-in agent!
+
