@@ -1,4 +1,4 @@
-# Lab 3 -  Skill Based Routing (SBR) Configuration and Troubleshooting
+# Lab 3 -  Flow Based SBR Configuration and Troubleshooting
 
 Please use the following credentials to connect to Control Hub and configure Webex Contact Center:
 
@@ -138,12 +138,12 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 - Under the **Skill Requirements** section, click **Add Skill** and configure the two static skill requirements:
 
-#### Skill 1 Configuration
+**Skill 1 Configuration**
 	* **Skill Name:** Static > `WebexOne__Spanish_Fluency`
 	* **Condition:** Static > `>=`
 	* **Value:** Static > `5`
 
-#### Skill 2 Configuration
+**Skill 2 Configuration**
 	* **Skill Name:** Static > `WebexOne_VIP_Support`
 	* **Value:** Static > `True`
 
@@ -152,7 +152,6 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 - Click **Validate** in the bottom right menu bar and ensure no error messages appear.
 
 - Click **Publish** to make the flow active for routing.
-
 
 - To route incoming calls to your newly defined skill-based agents, the published flow must be mapped to an inbound entry point channel, to configure 
 
