@@ -70,15 +70,14 @@ Note: Because this lab environment does not feature active live call traffic an 
 
 - We should see the setting **Apply AI Routing** is enabled
 
-- However, take a look at the screenshot below to see the steps required to apply AI Routing after Evaluation Mode completes
+- However, take a look at the screenshot below to see the steps required to apply AI Routing after Evaluation Mode completes in 5 days. 
 
-<<< Screen shot >>> 
-
+      ![Nav](./assets/21177_Excercise5_1.png){ width="200" }
 
 - Review the queue status section in it before the toggle switch to apply AI Routing was enabled: 
-	- KPI Selected: Handle Time
-	- Potential: This queue has high potential for AI Routing.
-	- Analyzer Link: Analyzer report which highlgihts how AI routing is behaving.
+	- **KPI Selected**: Handle Time
+	- **Potential**: This queue has high potential for AI Routing and offers analyzer report to review. 
+	- **Analyzer Link**: Analyzer report which highlgihts how AI routing is behaving.
 
 - The toggle  Blue indicates that Live AI Routing is now active for this queue, and real-time contacts will now be routed dynamically using the trained AI mode.
 
