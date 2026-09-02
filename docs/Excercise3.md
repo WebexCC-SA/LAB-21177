@@ -1,4 +1,4 @@
-# Lab 3 -  Set Up Outdial Calls in WxCC
+# Lab 3 -  Skill Based Routing (SBR) Configuration and TroubleshootingC
 
 Please use the following credentials to connect to Control Hub and configure Webex Contact Center:
 
