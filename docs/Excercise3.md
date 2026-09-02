@@ -11,6 +11,7 @@ Please use the following credentials to connect to Control Hub and configure Web
 ## Objective 
 
 In this lab exercise, 
+
 ## Section 1 : Review Skills, Profiles, and Agent Entitlements 
 
 **Verify Pre-created Skills:**
@@ -156,6 +157,87 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 - Under **Entry Point Settings**, navigate to the **Routing Flow** dropdown menu and select the published flow configured in the previous exercise (`webexOne_Skill_Flow_<Name>`).
 
 - Click **Save** to apply the changes.
+
+## Section 3 : Validating Dynamic SBR and Flow Logic
+
+**Log in to Agent Desktop and Test Initial Call Flow**
+
+- Open a browser tab and log in to the Webex Contact Center Agent Desktop:
+	- URL: [https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/)
+	- Username: Refer to your lab badge or contact your lab proctor.
+	- Password: Refer to your lab badge or contact your lab proctor.
+
+- On the login options screen, select Desktop as the telephony option, set the Team to WebexOne_Team_[num], and click Log In.
+
+- Ensure the agent state is set to Available in the top-right corner of the Agent Desktop.
+
+- From your mobile phone, dial the Dialed Number (DN) assigned to your entry point.
+
+- When prompted by the IVR menu, select Option 1 to route to the logged-in agent.
+
+**Analyze Unexpected Routing Behavior via Flow Debugger**
+
+- Notice that the call is immediately offered to the agent. This behavior is incorrect based on our design.
+
+- Expected Logic: 
+	- Selecting Option 1 assigns variables tagging the call as a Non-VIP customer. The logged-in agent's profile requires VIP Support entitlement to handle incoming calls. Therefore, the call should not route to this agent.
+
+- To isolate why the call routed incorrectly lets inspect the execution trace in Flow Debugger.
+
+- In Flow Builder, click Debug from the bottom menu bar.
+
+- Select the Interaction ID corresponding to your test call from the interaction list.
+
+- Locate and expand the QueueContact node activity (this is where skill evaluation occurs).
+
+- Under Activity Inputs > Skills Logs, inspect the JSON trace. The payload highlights the skills enforced on the call:
+		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
+		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
+
+{"requirements":[{"weight":1,"radioSkillName":"Static","radioCondition":"Static","skillName":"WebexOne__Spanish_Fluency","condition":"gte","radioValue":"Static","skill":"80468aea-74b7-4afb-a2d3-9d9c4e4f1f92","type":"proficiency","value":"5"},{"radioSkillName":"Static","radioCondition":"Static","skillName":"WebexOne_VIP_Support","condition":"eq","radioValue":"Static","skill":"e6a7297f-254b-483c-bb91-c5e2da8dda63","type":"boolean","value":"True"}],"relaxationToggle":false,"relaxations":[],"removeSkillsOnBlindTransfer":false}
+
+- Root Cause of this is although the Set Variable node set custom flow variables (Webexone_SPanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with Static skill values i.e. Spanish >= 5 and VIP = True). 
+
+- As a result, the queue forced a static VIP requirement of True (level 5) and spanish 5, which matches the logged-in agent's profile.
+
+**Update Queue Node to Dynamic Skill Assignment**
+
+- To enforce the dynamic parameters set during IVR selection, convert the static skill requirements in the QueueContact node to dynamic variables.
+
+- In Flow Builder, switch back to Design mode and toggle Edit mode to ON.
+
+- Select the QueueContact node on the canvas to open its properties panel.
+
+- Expand the Skill Requirements section.
+
+- Update Skill 1 to evaluate dynamically:
+	- **Skill Name**: Static > WebexOne__Spanish_Fluency
+	- **Condition**: Static > >=
+	- **Value**: Change from Static to Dynamic, then select the flow variable **Webexone_SPanish_FV**.
+
+- Update Skill 2 to evaluate dynamically:
+	- **Skill Name**: Static > WebexOne_VIP_Support
+	- **Value**: Change from Static to Dynamic, then select the flow variable **Webexone_VIPCustomer_FV**.
+
+- Click Validate in the bottom-right menu bar and ensure no configuration errors are returned.
+
+- Click Publish to deploy the updated flow.
+
+**Retest**
+
+- Ensure your agent is set to Available on the Agent Desktop.
+
+- **Test Call 1** : Option 1 - Non-VIP Flow
+
+- Dial your assigned Dialed Number and press Option 1.
+
+- **Result**: The call evaluates VIP = False. Because the agent requires VIP = True, the call will not route to the agent and will drop as expected.
+
+- **Test Call 2** : Option 0 - VIP Flow
+
+- Dial your assigned Dialed Number again and press Option 0.
+
+- **Result**: The call evaluates Spanish >= 5 and VIP = True. The call will successfully route and present to the logged-in agent!
 
 -------------------
 - In **Control Hub**, navigate to **Services** > **Contact Center**, then select **Flows** from the **Customer Experience** section.
