@@ -1,4 +1,4 @@
----
+sonalized ---
 site_name: "LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" # This must begin with the session ID, e.g. LABXXX-1234 This is my Cisco Live Lab
 site_description: "LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" # must be same as "site_name"
 site_author: Anuj Bhatia
@@ -93,7 +93,7 @@ nav:
       - Lab 2 - Setup Seamless Call Transfer : Excercise2.md
       - Lab 3 - SBR Configuration and Troubleshooting : Excercise3.md
       - Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting  : Excercise4.md
-      - Lab 5 - AI Routing : Excercise5.md
+      - Lab 5 - Personalized AI Routing : Excercise5.md
       - Lab 6 - Set Up Outdial Calls : Excercise6.md
       - Lab 7 - Webrtc Troubleshooting : Excercise7.md
       - Conclusion: conclusion.md
