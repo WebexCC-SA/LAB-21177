@@ -83,7 +83,9 @@ Note: Because this lab environment does not feature active live call traffic an 
 
 ### Section 4: Reporting & Analytics Concepts
 
-- In Webex Analyzer, Evaluation Mode generates a comparative dashboard that maps actual handle-time metrics against AI-predicted performance. Lets review the report for the Queue **WebexOne_SBR_Queue_[name]** Where you have enabled the evualation Mode. 
+- Evaluation Mode generates a comparative dashboard that maps actual handle-time metrics against AI-predicted performance.
+
+- Lets review the report for the Queue **WebexOne_SBR_Queue_[name]** Where you have enabled the evualation Mode. 
 
 - Navigate to Services > Contact Center > Desktop Experience > AI Features.
 
@@ -91,8 +93,36 @@ Note: Because this lab environment does not feature active live call traffic an 
 
 - Click on the queue to open its AI Routing details pane.
 
-- Locate the Potential status section and click the link: View Analyzer report.
+- Locate the Potential status section and click the link: **View Analyzer report**.
 
 - This will automatically open Webex Analyzer in a new browser tab with the report filtered for your queue.
 
-- Analyzer Link: Analyzer report which highlgihts the 5-day predictive handle-time reduction results before promoting the queue. 
+- However, all metric tiles will display 0 or 00:00:00, and the charts will show "No data available to render the visualization."
+
+      ![Nav](./assets/21177_Excercise5_2.png){ width="500" }
+
+- This is expected because our lab queue has processed minimal or no live calls during the evaluation window.
+
+- In a live environment, these metrics populate continuously over the 5-day shadow evaluation period.
+
+- To understand how to evaluate AI Routing performance in a real-world deployment, refer to the pre-populated production report screenshot below:
+
+      ![Nav](./assets/21177_Excercise5_3.png){ width="500" }
+
+Key Metrics to Examine in the Dashboard:
+
+- **Total Interactions**: The overall volume of contacts routed through standard queue logic during the evaluation period (e.g., 24).
+
+- **Total Interactions with Predictions**: The subset of interactions where the AI model successfully generated an agent match prediction (e.g., 15).
+
+- **Average Handle Time (Actual)**: The actual historical baseline handle time recorded for calls handled via standard routing (e.g., 00:05:31 / 5 min 31 sec).
+
+- **Average Handle Time (Predicted)**: The handle time the AI engine predicts would have been achieved if contacts had been routed to the AI's recommended agents (e.g., 00:03:10 / 3 min 10 sec).
+
+- **Average Handle Time Actual vs. Predicted KPI Chart**: A visual comparison comparing actual handling duration against predicted outcomes over time.
+
+- The Go-Live administrators can use the comparative metrics in this report to make a data-driven decision 
+
+- In this example because the predicted handle time (3m 10s) shows a significant reduction compared to the actual handle time (5m 31s), the administrator can confidently return to Control Hub and enable Apply AI Routing for the queue!
+
+**Congratulations!!** You have successfully completed this hands-on lab module on Webex Contact Center Personalized AI Routing.
