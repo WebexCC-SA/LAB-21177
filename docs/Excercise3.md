@@ -10,7 +10,15 @@ Please use the following credentials to connect to Control Hub and configure Web
 
 ## Objective 
 
-In this lab exercise, 
+The objective of this lab is to introduce the core concepts of Skill-Based Routing (SBR) in Webex Contact Center and demonstrate how flow variables can dynamically dictate call routing to ensure contacts reach the most qualified resource.
+
+This exercise is divided into three hands-on sections:
+
+- **Section 1: Skill Profile Management**: Learn how to define skills (proficiency and boolean) and map them to agents using Skill Profiles.
+
+- **Section 2: Dynamic Flow Configuration**: Explore advanced Flow Builder techniques to map call variables to skill requirements, driving targeted queue routing based on IVR selections.
+
+- **Section 3: Diagnostics & Troubleshooting**: Identify common skill-mapping and variable misconfigurations, isolate root causes using Flow Debugger execution traces and Analyzer CSR reports, and apply corrective routing logic.
 
 ## Section 1 : Review Skills, Profiles, and Agent Entitlements 
 
@@ -239,3 +247,6 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 - **Result**: The call evaluates Spanish >= 5 and VIP = True. The call will successfully route and present to the logged-in agent!
 
+**Congratulations!!!** on completing this lab! 
+
+You have successfully mastered the end-to-end setup of Skill-Based Routing in Webex Contact Center, from configuring skill profiles and dynamic flow variables to diagnosing real-world routing issues and tracking call journeys in Analyzer reports.
