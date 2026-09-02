@@ -1,4 +1,4 @@
-# Task 6 - Exploring WebRTC data and statistics
+# Task 7 - Exploring WebRTC data and statistics
 
 
 Please use the following credentials to connect to Control Hub and configure Webex Contact Center:
