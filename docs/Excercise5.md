@@ -16,14 +16,13 @@ By completing this module, prticipants will be able to:
 
 - **Understand the Core Value**: Learn how multi-dimensional AI dynamic matchmaking optimizes routing based on operational metrics like Handle Time.
 
-- **Configure Global & Custom KPIs**: Review AI Routing at the organization level and Perform bulk Optimization Checks and initiate Evaluation Mode (Shadow Mode).
+- **Review Global Configuration**: Review AI Routing at the organization level and Perform bulk Optimization Checks and initiate Evaluation Mode (Shadow Mode).
 
-- **Master the Concept of Shadow Mode**: Understand how AI models predict handle-time reductions without altering live call flows.
+- **Learn the Concept of Shadow Mode**: Learn how AI models predict handle-time reductions without altering live call flows.
 
-- **Analyze Predictive Performance**: Navigate Webex Analyzer to review AI handle-time prediction models against baseline queue historical performance.ce.
+- **Analyze Predictive Performance**: Review AI handle-time prediction models in analyzer against baseline queue historical performance.
 
-Note on Lab Org Data: Because this lab environment does not feature active live call traffic, your configured queue will validate the setup and configuration flow. For reporting and analytics validation, an existing pre-populated queue (AI_Routing_Reference_Queue) has been provided to explore performance dashboards.
-
+Note: Because this lab environment does not feature active live call traffic an existing pre-populated queue **WebexOne_SkillQueueFlow** has been provided to explore confguration and performance dashboards.
 
 ## Section 1 : Review Org-Level Enablement Setting 
 
@@ -65,9 +64,9 @@ Note on Lab Org Data: Because this lab environment does not feature active live 
 
 - Navigate back to the Queues tab under AI Features.
 
-- In the search/filter bar, enter the queue name: WebexOne_SkillQueueFlow_Anuj.
+- In the search/filter bar, enter the queue name: **WebexOne_SkillQueueFlow**
 
-- Click on WebexOne_SkillQueueFlow_Anuj to open its detailed AI Routing configuration pane.
+- Click on **WebexOne_SkillQueueFlow** to open its detailed AI Routing configuration pane.
 
 - We should see the setting **Apply AI Routing** is enabled
 
@@ -76,7 +75,7 @@ Note on Lab Org Data: Because this lab environment does not feature active live 
 <<< Screen shot >>> 
 
 
-- Review the queue status section before enabling the toggle switch to apply AI Routing:
+- Review the queue status section in it before the toggle switch to apply AI Routing was enabled: 
 	- KPI Selected: Handle Time
 	- Potential: This queue has high potential for AI Routing.
 	- Analyzer Link: Analyzer report which highlgihts how AI routing is behaving.
