@@ -91,8 +91,8 @@ nav:
       - Overview: overview.md
       - Lab 1 - Configure and Debug Inbound Call Flows : Excercise1.md
       - Lab 2 - Setup Seamless Call Transfer : Excercise2.md
-      - Lab 3 - Skill Based Routing (SBR) Configuration and Troubleshooting : Excercise3.md
-      - Lab 4 - Set Up Outdial Calls : Excercise4.md
+      - Lab 3 - SBR Configuration and Troubleshooting : Excercise3.md
+      - Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting  : Excercise4.md
       - Lab 5 - Set Up Outdial Calls : Excercise5.md
       - Lab 6 - [Bonus] Webrtc Troubleshooting : Excercise6.md
       - Conclusion: conclusion.md
