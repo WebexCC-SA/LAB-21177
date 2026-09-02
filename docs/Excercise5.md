@@ -111,15 +111,15 @@ Note: Because this lab environment does not feature active live call traffic an 
 
 Key Metrics to Examine in the Dashboard:
 
-- **Total Interactions**: The overall volume of contacts routed through standard queue logic during the evaluation period (e.g., 24).
+	- **Total Interactions**: The overall volume of contacts routed through standard queue logic during the evaluation period (e.g., 24).
 
-- **Total Interactions with Predictions**: The subset of interactions where the AI model successfully generated an agent match prediction (e.g., 15).
+	- **Total Interactions with Predictions**: The subset of interactions where the AI model successfully generated an agent match prediction (e.g., 15).
 
-- **Average Handle Time (Actual)**: The actual historical baseline handle time recorded for calls handled via standard routing (e.g., 00:05:31 / 5 min 31 sec).
+	- **Average Handle Time (Actual)**: The actual historical baseline handle time recorded for calls handled via standard routing (e.g., 00:05:31 / 5 min 31 sec).
 
-- **Average Handle Time (Predicted)**: The handle time the AI engine predicts would have been achieved if contacts had been routed to the AI's recommended agents (e.g., 00:03:10 / 3 min 10 sec).
+	- **Average Handle Time (Predicted)**: The handle time the AI engine predicts would have been achieved if contacts had been routed to the AI's recommended agents (e.g., 00:03:10 / 3 min 10 sec).
 
-- **Average Handle Time Actual vs. Predicted KPI Chart**: A visual comparison comparing actual handling duration against predicted outcomes over time.
+	- **Average Handle Time Actual vs. Predicted KPI Chart**: A visual comparison comparing actual handling duration against predicted outcomes over time.
 
 - The Go-Live administrators can use the comparative metrics in this report to make a data-driven decision 
 
