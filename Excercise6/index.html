@@ -1,0 +1,1742 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design">
+      
+      
+        <meta name="author" content="Anuj Bhatia">
+      
+      
+      
+        <link rel="prev" href="../Excercise5/">
+      
+      
+        <link rel="next" href="../Excercise7/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lab 6 - Set Up Outdial Calls - LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-6-set-up-outdial-calls-in-wxcc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" class="md-header__button md-logo" aria-label="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 6 - Set Up Outdial Calls
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../welcome/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../howToUse/initialSetup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  How to use this guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" class="md-nav__button md-logo" aria-label="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../welcome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 - Configure and Debug Inbound Call Flows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 - Setup Seamless Call Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 - SBR Configuration and Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 - Personalized AI Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 - Set Up Outdial Calls
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 - Set Up Outdial Calls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-setup-outdial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 : Setup Outdial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-test-outdial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 : Test Outdial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-troubleshoot-outdial-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 : Troubleshoot Outdial Failure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-custom-outdial-ani" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4 : Custom Outdial ANI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 - Webrtc Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to use this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How to use this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up and using the tool
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setting up and using the tool
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/initialSetup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initial Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/postInitial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the tool after the initial setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/syncChanges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing your changes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/usefulTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Useful Tools and Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/importingFromWord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Importing from Word (docx)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Styling and Advanced Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Styling and Advanced Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/customFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/admonition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Admonitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/previousEventLabs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Looking for Inspiration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/beforeTheEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Before the Event
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-6-set-up-outdial-calls-in-wxcc">Lab 6 -  Set Up Outdial Calls in WxCC</h1>
+<p>Please use the following credentials to connect to Control Hub and configure Webex Contact Center:</p>
+<table>
+<thead>
+<tr>
+<th><!-- --></th>
+<th><!-- --></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Control Hub URL</code></td>
+<td><a href="https://admin.webex.com" target="_blank">https://admin.webex.com</a></td>
+</tr>
+<tr>
+<td><code>Username</code></td>
+<td>labuser<strong>ID</strong>@wx1.wbx.ai <em>(where <strong>ID</strong> is your assigned pod number; this ID will be provided by your proctor)</em></td>
+</tr>
+<tr>
+<td><code>Password</code></td>
+<td>webexONE1!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="objective">Objective</h2>
+<p>In this lab exercise, the audience will gain hands-on experience configuring WxCC solutions to enable outdial capabilities from scratch. Furthermore, the exercise will also equip participants with essential debugging skills to identify and rectify frequent implementation errors ensuring a robust and functional deployment.</p>
+<h2 id="section-1-setup-outdial">Section 1 : Setup Outdial</h2>
+<ul>
+<li>
+<p>Log into <a href="https://admin.webex.com">Webex Control Hub</a> with the provided credentials.</p>
+</li>
+<li>
+<p>In Control Hub, navigate to Services and click on Contact Center.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_1.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_1.png" width="200"></a></p>
+</li>
+<li>
+<p>In the Contact Center navigation pane, under Customer Experience, select <strong>Queues</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_2.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_2.png" width="400"></a></p>
+</li>
+<li>
+<p>Create a new queue by clicking on the "Create a Queue" option.</p>
+</li>
+<li>
+<p>The Queue Creation Wizard will appear. Provide the following details:</p>
+<ul>
+<li><strong>General</strong><ul>
+<li><strong>Name</strong>: [Provide a descriptive name for your queue]</li>
+<li><strong>Contact direction</strong>: Outdial Queue</li>
+<li><strong>Channel type</strong>: Telephony</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_3.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_3.png" width="800"></a></p>
+<ul>
+<li><strong>Contact Routing Settings</strong><ul>
+<li><strong>AgentAssignment</strong>: Teams</li>
+<li><strong>Routing Pattern</strong>: Longest available</li>
+<li><strong>Call Distribution</strong>: Create a group and add the team <strong>WebeOne_Team_[num]</strong></li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_4.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_4.png" width="700"></a></p>
+<ul>
+<li><strong>Advanced Settings</strong><ul>
+<li><strong>Service level threshold</strong>: 30 seconds</li>
+<li><strong>Maximum time in queue</strong>: 30 seconds</li>
+<li><strong>Default music in queue</strong>: defaultmusic_on_hold.wav</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_5.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_5.png" width="700"></a></p>
+</li>
+<li>
+<p>Once these settings are added, click Create to finalize the queue.</p>
+</li>
+<li>
+<p>Lets create a Entry point to map the queue to this entry point. </p>
+</li>
+<li>
+<p>Navigate back to Customer Experience in Contact Center and click on <strong>Channels</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_6.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_6.png" width="200"></a></p>
+</li>
+<li>
+<p>Create a new channel by clicking on the "Create a channel" option.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_7.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_7.png" width="180"></a></p>
+</li>
+<li>
+<p>The Channel Creation Wizard will appear. Provide the following details:</p>
+<ul>
+<li><strong>Name</strong>: [Provide a descriptive name for your channel]</li>
+<li><strong>Channel type</strong>: Outbound Telephony</li>
+<li><strong>Service level threshold</strong>: 30 seconds</li>
+<li><strong>Timezone</strong>: America/New York</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_8.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_8.png" width="750"></a></p>
+</li>
+<li>
+<p>After these settings are added, click Create to finalize the channel.</p>
+</li>
+<li>
+<p>Since outdial is an agent activity, the Agent Desktop should have the capability to call any number outside the WxCC ecosystem. </p>
+</li>
+<li>
+<p>To enable this capability, create an agent profile and map it to the agent.</p>
+</li>
+<li>
+<p>Navigate to Desktop Experience in Contact Center and click on <strong>Desktop Profiles</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_9.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_9.png" width="200"></a></p>
+</li>
+<li>
+<p>In Desktop Profiles, create a new profile by clicking on "Create Desktop Profile".</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_10.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_10.png" width="200"></a></p>
+</li>
+<li>
+<p>In the General section, provide the desired name for your profile.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_11.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_11.png" width="700"></a></p>
+</li>
+<li>
+<p>Move to "Dial Plans" by clicking Next button (at the bottom of the screen) a couple of times.</p>
+</li>
+<li>
+<p>Enable "<strong>Outdial</strong>".</p>
+<ul>
+<li>Select the newly create entrypoint as an "<strong>Outdial Entry Point</strong>".</li>
+<li>Select the preconfigured address book "<strong>WebexOne_outdial_AddressBook</strong>" as an "<strong>Address Book</strong>".</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_12.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_12.png" width="700"></a></p>
+</li>
+<li>
+<p>Move to "Voice Channel Options" by clicking Next and ensure that "Desktop" is enabled under "Voice Channels options".</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_13.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_13.png" width="700"></a></p>
+</li>
+<li>
+<p>Proceed to the end of desktop profile creation by clicking Next and finally Create.</p>
+</li>
+<li>
+<p>Now, Navigate to the User Management section in Contact Center and click on <strong>Contact Center Users</strong>.</p>
+</li>
+<li>
+<p>Bring up your user and assign the newly created desktop profile under "Desktop Profile" and Save changes.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_14.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_14.png" width="800"></a></p>
+</li>
+</ul>
+<h2 id="section-2-test-outdial">Section 2 : Test Outdial</h2>
+<ul>
+<li>
+<p>Now, log in to the Agent Desktop using the provided credentials.</p>
+<ul>
+<li><strong>URL</strong>: https://desktop.wxcc-us1.cisco.com/</li>
+<li><strong>Username</strong>: Contact the lab proctor if information is unavailable.</li>
+<li><strong>Password</strong>: Contact the lab proctor if information is unavailable.</li>
+</ul>
+</li>
+<li>
+<p>Please select desktop as telephony option and set the Team as <strong>WebexOne_Team_[num]</strong> and login.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_15.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_15.png" width="400"></a></p>
+</li>
+<li>
+<p>Present task is to dial your cell phone number. </p>
+</li>
+<li>
+<p>First, click the Outdial Call option on the top right corner of the desktop. </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_16.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_16.png" width="300"></a></p>
+</li>
+<li>
+<p>You'll notice that the dial pad is missing; the only available option is to search by name, email, or number within the tenant. </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_17.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_17.png" width="300"></a></p>
+</li>
+<li>
+<p>This prevents us from dialing an individual cell phone number directly. </p>
+</li>
+<li>
+<p>To fix this, we need to find where the dial pad setting is controlled. </p>
+</li>
+<li>
+<p>Since this is an agent desktop function, we'll check the agent's desktop profile and the dial plan where we enabled the outdial option.</p>
+</li>
+<li>
+<p>In Control Hub, go back to the Desktop Profile section. </p>
+</li>
+<li>
+<p>Select the profile that's mapped to the agent you are working with.</p>
+</li>
+<li>
+<p>Navigate to the Dial Plans tab. </p>
+</li>
+<li>
+<p>Enable the dial plan functionality and select US as the dial plan. Then, click Save.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_18.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_18.png" width="800"></a></p>
+</li>
+<li>
+<p>Refresh the Agent Desktop application browser. </p>
+</li>
+<li>
+<p>Click the Outdial option again.</p>
+</li>
+<li>
+<p>You should now see the number pad pop up, allowing you to punch in numbers.</p>
+</li>
+<li>
+<p>Enter your cell phone number. You may add a "1" before the number, or it will work without it </p>
+</li>
+<li>
+<p>Click the Dial button.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_18.1.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_18.1.png" width="400"></a></p>
+</li>
+<li>
+<p>You should ideally see an agent-initiated call to the cell phone number, but nothing happens.</p>
+</li>
+</ul>
+<h2 id="section-3-troubleshoot-outdial-failure">Section 3 : Troubleshoot Outdial Failure</h2>
+<ul>
+<li>
+<p>Let's troubleshoot to see why this is the case. </p>
+</li>
+<li>
+<p>To figure this out, bring up the browser developer tool (Windows Shortcut: Press F12 Key)</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_19_0.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_19_0.png" width="500"></a></p>
+</li>
+<li>
+<p>Once the developer tool is up, ensure that it's on the "Console" tab and clear the console logs by selecting the "Clear Console" button </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_19.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_19.png" width="500"></a></p>
+</li>
+<li>
+<p>Using the dial pad, dial the cell phone number again.</p>
+</li>
+<li>
+<p>As soon as the call fails, you should see a red error message in the console logs with the message <strong>event=OutdialFailed</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_20.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_20.png" width="700"></a></p>
+</li>
+<li>
+<p>Now, let's look closer into the failure message and figure out what the issue might be.</p>
+</li>
+<li>
+<p>For ease, one can copy the error message into a Notepad or Notepad++ application.</p>
+</li>
+<li>
+<p>Search for "error," and at the bottom of the error message, you will notice there is a fetch error on "<strong>Config</strong>" – "<strong>Config_fetch_error</strong>." The exact config it's talking about is "<strong>queuemgr</strong>" which basically means queue.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_21.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_21.png" width="800"></a> <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_21_1.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_21_1.png" width="400"></a></p>
+</li>
+<li>
+<p>This overall means the system is not able to fetch the team details from the queue perspective where agent resides. </p>
+</li>
+<li>
+<p>In WxCC, a queue is always mapped to an entry point via routing flows, so let's go back to the Entry Point for outdial and check the configuration again.</p>
+</li>
+<li>
+<p>Via Control Hub, under "Customer Experience," go back via "Channel" to the Outdial Entry Point that was configured.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_6.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_6.png" width="200"></a></p>
+</li>
+<li>
+<p>Under "Entry Point Settings," you will notice that there is no routing flow mapped.</p>
+</li>
+<li>
+<p>From the dropdown, select the flow "<strong>WebexOne_OutdialUser[num]_Flow</strong>" and fill in these fields:</p>
+<ul>
+<li>Music on hold: "defaultmusic_on_hold"</li>
+<li>Version label: Latest</li>
+<li>Outdial Queue: Select the queue that was created in step 1 of your initial setup.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_6.1.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_6.1.png" width="800"></a></p>
+</li>
+<li>
+<p>Save the settings.</p>
+</li>
+<li>
+<p>Refresh the Agent Desktop browser and perform the outdial to the cell phone number; the call should now be successful.</p>
+</li>
+<li>
+<p>If you observe the browser debug console logs, you should see a message that will clearly show case its fetching the config and have the team details via the queue ID.</p>
+</li>
+</ul>
+<h2 id="section-4-custom-outdial-ani">Section 4 : Custom Outdial ANI</h2>
+<ul>
+<li>
+<p>In many cases, business requirements dictate that the Outdial ANI displayed on customer devices should be set to a specific toll-free or departmental number.</p>
+</li>
+<li>
+<p>Here, the outdial ANI noticed on the cell phone is "<strong>+19842906065</strong>" which is the default configuration set on the tenant level.</p>
+</li>
+<li>
+<p>To, review the Tenant-Level Outdial ANI setting in tenant Settings navigate to the Voice tab and note the existing Outdial ANI which is "<strong>+19842906065</strong>".</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_22.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_22.png" width="700"></a></p>
+</li>
+<li>
+<p>To change to a custom ANI, administrator can create there own outdial ANI.</p>
+</li>
+<li>
+<p>For ease here outdial ANI has already been pre-configured and to review in Desktop Experience, go to Outdial ANI settings.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_23.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_23.png" width="200"></a></p>
+</li>
+<li>
+<p>Select <strong>WebexOne_Outdial_ANI</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_24.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_24.png" width="300"></a></p>
+</li>
+<li>
+<p>Confirm that it is mapped to the number "<strong>+19842906070</strong>".</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_25.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_25.png" width="700"></a></p>
+</li>
+<li>
+<p>A custom Outdial ANI allows an agent to select the ANI on the desktop during an outdial call, provided the agent’s desktop profile is mapped to the new Outdial ANI.</p>
+</li>
+<li>
+<p>To check in Desktop Experience, open the configured Agent Desktop Profile.</p>
+</li>
+<li>
+<p>Navigate to the Dial Plans section.</p>
+</li>
+<li>
+<p>In the Outdial ANI field, select <strong>WebexOne_Outdial_ANI</strong> and save your changes.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../assets/2310_Excercise3_1_26.png" data-title="Nav" data-desc-position="top"><img alt="Nav" src="../assets/2310_Excercise3_1_26.png" width="700"></a></p>
+</li>
+<li>
+<p>Now, Perform an Outdial Call Using the Custom ANI.</p>
+</li>
+<li>
+<p>Log in or refresh the agent desktop.</p>
+</li>
+<li>
+<p>Initiate an outdial call.</p>
+</li>
+<li>
+<p>Verify on the recipient’s device that the displayed ANI is the custom number.</p>
+</li>
+</ul>
+<p><strong>Congratulations !!</strong> on completing this exercise! </p>
+<p>You've not only set up the outdial feature from scratch but also learned how to identify and fix common errors, ensuring your deployments are both functional and reliable.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../Excercise5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 5 - Personalized AI Routing">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lab 5 - Personalized AI Routing
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Excercise7/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 7 - Webrtc Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lab 7 - Webrtc Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

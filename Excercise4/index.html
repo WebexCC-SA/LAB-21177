@@ -1,0 +1,1716 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design">
+      
+      
+        <meta name="author" content="Anuj Bhatia">
+      
+      
+      
+        <link rel="prev" href="../Excercise3/">
+      
+      
+        <link rel="next" href="../Excercise5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting - LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-4-blind-transfer-skill-requirements-and-lifecycle-reporting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" class="md-header__button md-logo" aria-label="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../welcome/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../howToUse/initialSetup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  How to use this guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" class="md-nav__button md-logo" aria-label="LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    LAB-21177 - Practical Guide to Webex Contact Center Troubleshooting and Flow Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../welcome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lab
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1 - Configure and Debug Inbound Call Flows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2 - Setup Seamless Call Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3 - SBR Configuration and Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-review-the-transfer-queue-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Review the Transfer Queue Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-initiate-call-and-experience-the-transfer-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Initiate Call and Experience the Transfer Failure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-troubleshooting-and-correcting-the-blind-transfer-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Troubleshooting and Correcting the Blind Transfer Failure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-add-termination-fields-to-isolate-root-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: Add Termination Fields to Isolate Root Cause
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-identify-root-cause-via-flow-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Identify Root Cause via Flow Debugger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-retest-and-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6: Retest and Validate
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 5 - Personalized AI Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 6 - Set Up Outdial Calls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Excercise7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 7 - Webrtc Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to use this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How to use this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting up and using the tool
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setting up and using the tool
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/initialSetup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initial Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/postInitial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the tool after the initial setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/syncChanges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing your changes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/usefulTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Useful Tools and Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/importingFromWord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Importing from Word (docx)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Styling and Advanced Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Styling and Advanced Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/customFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/admonition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Admonitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/previousEventLabs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Looking for Inspiration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howToUse/beforeTheEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Before the Event
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-4-blind-transfer-skill-requirements-and-lifecycle-reporting">Lab 4 - Blind Transfer Skill Requirements and Lifecycle Reporting</h1>
+<p>Please use the following credentials to connect to Control Hub and configure Webex Contact Center:</p>
+<table>
+<thead>
+<tr>
+<th><!-- --></th>
+<th><!-- --></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Control Hub URL</code></td>
+<td><a href="https://admin.webex.com" target="_blank">https://admin.webex.com</a></td>
+</tr>
+<tr>
+<td><code>Username</code></td>
+<td>labuser<strong>ID</strong>@wx1.wbx.ai <em>(where <strong>ID</strong> is your assigned pod number; this ID will be provided by your proctor)</em></td>
+</tr>
+<tr>
+<td><code>Password</code></td>
+<td>webexONE1!</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This task showcases available WebRTC call data and statistics using built-in browser tools and simulates missing audio during the call.</p>
+</div>
+<h2 id="objective">Objective</h2>
+<p>In this lab, you will explore how skill requirements attached to an inbound call behave when an agent performs a blind transfer directly to a skill-based queue.</p>
+<p><strong>Current Call Flow Scenario:</strong>
+A customer calls in and selects <strong>Option 0</strong>. The call is routed to a logged-in agent matching the required skills. The agent then attempts a blind transfer to a pre-defined queue from the Agent Desktop. However, instead of connecting to an available agent in that queue, the call fails.</p>
+<p><strong>Task:</strong>
+1. <strong>Troubleshoot the Failure:</strong> Identify why the transferred call drops or fails to route.
+2. <strong>Apply Corrective Logic:</strong> Troubleshoot the issue Update the contact flow to handle transferred skill attributes properly.
+3. <strong>Verify Call Completion:</strong> Perform a successful blind transfer to an available agent.
+4. <strong>Build a Journey Report:</strong> Create a custom Analyzer report that maps the complete end-to-end call lifecycle across Labs 2 and 3, displaying the exact skills associated with each call leg.</p>
+<h2 id="section-1-review-the-transfer-queue-configuration">Section 1: Review the Transfer Queue Configuration</h2>
+<ul>
+<li>
+<p>Before attempting the transfer lets inspect the pre-configured target queue to verify its routing settings and assigned team.</p>
+</li>
+<li>
+<p>In the <strong>Contact Center</strong> navigation pane, select <strong>Queues</strong> under the <strong>Customer Experience</strong> section.</p>
+</li>
+<li>
+<p>In the search bar, search for the queue named <strong>WebexOne_BlindTransfer_SGtoFlowQueue</strong>.</p>
+</li>
+<li>
+<p>Click the queue row or edit icon to inspect the <strong>Contact Routing Settings</strong>, ensuring the following options are configured:</p>
+<ul>
+<li><strong>Skill-Based Routing:</strong> Toggle enabled (<em>Use skills-based routing for this queue</em>).</li>
+<li><strong>Skill Assignment Type:</strong> Select <strong>Assign skills in flows</strong>.</li>
+<li><strong>Agent Assignment:</strong> Select <strong>Teams</strong>.</li>
+<li><strong>Routing Pattern:</strong> Select <strong>Longest Available</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Scroll to <strong>Call Distribution</strong>, click the <strong>Edit (pencil)</strong> icon under <em>Actions</em>, search for the team <code>WebexOne_Team_31</code>, and ensure it is added to the queue.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> The team <code>WebexOne_Team_31</code> is assigned to the user <code>labuser31@wx1.wbx.ai</code>, who is currently logged in and set to <strong>Available</strong> on the proctor's workstation. </p>
+<ul>
+<li>Your goal in this exercise is to successfully transfer a call to the proctor.</li>
+</ul>
+<h2 id="section-2-initiate-call-and-experience-the-transfer-failure">Section 2: Initiate Call and Experience the Transfer Failure</h2>
+<ul>
+<li>
+<p>Log into your <strong>Agent Desktop</strong> and ensure your state is set to <strong>Available</strong>.</p>
+</li>
+<li>
+<p>From your mobile device, dial your assigned entry point Dialed Number (DN) and press <strong>Option 0</strong> to route the call to your agent session.</p>
+</li>
+<li>
+<p>Accept the incoming call on your Agent Desktop.</p>
+</li>
+<li>
+<p>On the call control card, verify that the active flow variables and skill requirements are displayed:</p>
+<ul>
+<li><code>Language</code> : <strong>5</strong></li>
+<li><code>VIP</code> : <strong>True</strong></li>
+</ul>
+</li>
+<li>
+<p>On the Agent Desktop action bar, click <strong>Transfer</strong>, select <strong>Queue</strong>, and search for <code>WebexOne_BlindTransfer_SGtoFlowQueue</code>.</p>
+</li>
+<li>
+<p>Select the queue name and click <strong>Transfer</strong> to execute a blind transfer.</p>
+</li>
+<li>
+<p>Observe the transfer behavior</p>
+</li>
+<li>
+<p>The call drops immediately instead of connecting to the available proctor agent <strong><code>labuser31@wx1.wbx.ai</code></strong>.</p>
+</li>
+</ul>
+<h2 id="section-3-troubleshooting-and-correcting-the-blind-transfer-failure">Section 3: Troubleshooting and Correcting the Blind Transfer Failure</h2>
+<p>To troubleshoot a blind transfer failure, inspect the <strong>Flow Debugger</strong> interaction trace alongside the <strong>Analyzer Customer Session Record (CSR)</strong> report to identify the root cause.</p>
+<p><strong>Step 1: Retrieve the Interaction ID from Flow Debugger</strong></p>
+<ul>
+<li>
+<p>In <strong>Flow Builder</strong>, click <strong>Debug</strong> in the bottom action bar.</p>
+</li>
+<li>
+<p>Locate the failed call in the interaction list and note down its <strong>Interaction ID</strong>.</p>
+</li>
+</ul>
+<p><strong>Step 2: Open and Configure the Analyzer CSR Report</strong></p>
+<ul>
+<li>
+<p>In <strong>Control Hub</strong>, navigate to <strong>Services</strong> &gt; <strong>Contact Center</strong> and select <strong>Overview</strong>.</p>
+</li>
+<li>
+<p>Under the <strong>Quick Links</strong> section on the right, select <strong>Analyzer</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Visualization</strong>, then double-click your personal user folder: <code>WebexOne_Report_User[num]</code>.</p>
+</li>
+<li>
+<p>Open the pre-configured report named <strong>CSR Report on SBR</strong> (a pre-built copy of the stock Customer Session Record report).</p>
+<blockquote>
+<p><strong>Note:</strong> This report is  pre-populated with several Row Segments to simplify setup:
+    &gt; * <code>EntryPointName</code>
+    &gt; * <code>ContactSessionID</code>
+    &gt; * <code>FirstQueueName</code>
+    &gt; * <code>Required Skills</code>
+    &gt; * <code>Matched Skills</code>
+    &gt; * <code>First Agent Name</code>
+    &gt; * <code>Queue Name</code>
+    &gt; * <code>Final Agent Name</code></p>
+</blockquote>
+</li>
+<li>
+<p>Click <strong>Edit</strong> to modify the report layout.</p>
+</li>
+<li>
+<p>Ensure the report time range filter is set to <strong>Today</strong>.</p>
+</li>
+<li>
+<p>Confirm that all required fields listed above are present under <strong>Row Segments</strong>.</p>
+</li>
+<li>
+<p>Save the visualization and click <strong>Preview</strong>.</p>
+</li>
+<li>
+<p>Search for the <strong>Interaction ID</strong> you retrieved in Step 1.</p>
+</li>
+<li>
+<p>Review the call record row:</p>
+<ul>
+<li><code>FirstQueueName</code>: The initial queue where the call landed.</li>
+<li><code>Required Skills</code>: Skills required for initial call presentation to the agent.</li>
+<li><code>Matched Skills</code>: The agent skills matched during routing.</li>
+<li><code>First Agent Name</code>: Name of the agent who answered the initial call.</li>
+<li><code>Transferred Queue Name</code>: The queue to which the agent transferred the call.</li>
+<li><code>Last Agent Name</code>: The final agent who received the transferred call.</li>
+</ul>
+</li>
+<li>
+<p><strong>Observation:</strong> The <code>Transferred Queue Name</code> displays the correct queue, but <code>Last Agent Name</code> still displays the original agent, indicating the transfer was unsuccessful.</p>
+</li>
+</ul>
+<h2 id="section-4-add-termination-fields-to-isolate-root-cause">Section 4: Add Termination Fields to Isolate Root Cause</h2>
+<p>To determine why the transfer failed and which component terminated the call, add specific termination fields to the report:</p>
+<ul>
+<li>
+<p>Return to the <strong>Visualization</strong> edit page for your report.</p>
+</li>
+<li>
+<p>Under <strong>Row Segments</strong>, search for <strong>Terminated By</strong> in the <em>New Segment</em> section.</p>
+</li>
+<li>
+<p>Drag and drop <strong>Terminated By</strong> to the bottom of the <strong>Row Segments</strong> list.</p>
+</li>
+<li>
+<p>Repeat the same process for <strong>Termination Type</strong> and <strong>Abandoned Type</strong>.</p>
+</li>
+<li>
+<p>Save the report and click <strong>Preview</strong>.</p>
+</li>
+<li>
+<p>Search for your <strong>Interaction ID</strong> again and analyze the updated fields:</p>
+<ul>
+<li><strong>Terminated By (<code>System</code>):</strong> The call was ended programmatically by the Webex Contact Center platform, rather than by the customer or agent.</li>
+<li><strong>Termination Type (<code>abandoned</code>):</strong> The system classified the call leg as dropped before connecting to an agent following the transfer request.</li>
+<li><strong>Abandoned Type (<code>Queue</code>):</strong> The call failed while waiting in the destination queue (<code>WebexOne_BlindTransfer_SGtoFlowQueue</code>).</li>
+</ul>
+</li>
+<li>
+<p>The field results confirm that the blind transfer reached the destination queue, but no matching agent was found. </p>
+</li>
+<li>
+<p>The system held the call in queue until the timeout threshold was reached, resulting in a system-initiated queue abandonment.</p>
+</li>
+<li>
+<p>The underlying cause is a <strong>Skill Carryover Conflict</strong>. By default, when an agent performs a blind transfer, the system carries over the initial call's required skills (<code>Spanish &gt;= 5</code>, <code>VIP = True</code>). Because the receiving agent in <code>WebexOne_Team_31</code> does not hold those exact matching attributes, no eligible agent is found.</p>
+</li>
+</ul>
+<h2 id="section-5-identify-root-cause-via-flow-debugger">Section 5: Identify Root Cause via Flow Debugger</h2>
+<ul>
+<li>
+<p>Return to <strong>Flow Debugger</strong> and inspect the <strong>QueueContact</strong> activity log for this call.</p>
+</li>
+<li>
+<p>Locate the <strong>Skills Logs</strong> JSON trace to confirm that skill removal is disabled:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"radioSkillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Static"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"radioCondition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Static"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WebexOne__Spanish_Fluency"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"condition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gte"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"radioValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dynamic"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"skill"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80468aea-74b7-4afb-a2d3-9d9c4e4f1f92"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"proficiency"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"radioSkillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Static"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"radioCondition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Static"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WebexOne_VIP_Support"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"condition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eq"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"radioValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dynamic"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"skill"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e6a7297f-254b-483c-bb91-c5e2da8dda63"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"relaxationToggle"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"relaxations"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">"removeSkillsOnBlindTransfer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Notice that <code>"removeSkillsOnBlindTransfer"</code> is set to <code>false</code>.</p>
+</li>
+<li>
+<p>Now, Update the Flow and Enable Skill Removal</p>
+</li>
+<li>
+<p>Open your flow in <strong>Flow Designer</strong> and click <strong>Edit</strong> (or toggle <strong>Edit</strong> to <strong>ON</strong>).</p>
+</li>
+<li>
+<p>Click the <strong>QueueContact</strong> node on the canvas to open its properties panel.</p>
+</li>
+<li>
+<p>Under <strong>Skill Removal</strong>, toggle <strong>Remove skills on blind transfer</strong> to <strong>Enabled</strong> (<code>True</code>).</p>
+</li>
+<li>
+<p>Click <strong>Validate</strong>, then click <strong>Publish</strong> to deploy the updated flow.</p>
+</li>
+</ul>
+<h2 id="section-6-retest-and-validate">Section 6: Retest and Validate</h2>
+<ul>
+<li>
+<p>Dial the entry point number, press <strong>Option 0</strong> to reach your Agent Desktop, and accept the call.</p>
+</li>
+<li>
+<p>From the Agent Desktop, perform a blind transfer to <code>WebexOne_BlindTransfer_SGtoFlowQueue</code>.</p>
+</li>
+<li>
+<p>Verify that the call successfully routes and rings the proctor's phone (<code>labuser31@wx1.wbx.ai</code>).</p>
+</li>
+<li>
+<p>Re-inspect the <strong>QueueContact</strong> trace in <strong>Flow Debugger</strong>; confirm that <code>"removeSkillsOnBlindTransfer"</code> is now set to <code>true</code>.</p>
+</li>
+<li>
+<p>Refresh your Analyzer report and search for the new <strong>Interaction ID</strong>. Verify that:</p>
+<ul>
+<li><code>Transferred Queue Name</code> displays the target queue.</li>
+<li><code>Last Agent Name</code> updates to show the proctor agent who received the transfer.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Congratulations!!</strong> You have successfully completed this lab.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../Excercise3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 3 - SBR Configuration and Troubleshooting">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lab 3 - SBR Configuration and Troubleshooting
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Excercise5/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 5 - Personalized AI Routing">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lab 5 - Personalized AI Routing
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
