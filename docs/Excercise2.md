@@ -110,7 +110,7 @@ The task is to Update the flow so the call transfers seamlessly to the correct d
 
 - Call your provided number from your cell phone again and press Option 1. 
 
-- You should hear no ringback, but instead, be directly presented with the menu option to enter your user ID.
+- You should hear no ringback, but instead call will be directly presented with the menu option to enter your user ID.
 
 - This resolves the transfer problem of solution rejecting this type of unsupprted internal transfer.
 
