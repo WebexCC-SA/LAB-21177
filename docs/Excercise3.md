@@ -224,7 +224,8 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 - Notice that the call is immediately offered to the agent. This behavior is incorrect based on our design.
 
 - Expected Logic: 
-	- Selecting Option 1 assigns variables tagging the call as a Non-VIP customer. The logged-in agent's profile requires VIP Support entitlement to handle incoming calls. Therefore, the call should not route to this agent.
+	- Selecting Option 1 assigns variables tagging the call as a Non-VIP customer.
+    - The logged-in agent's profile requires VIP Support entitlement to handle incoming calls. Therefore, the call should not route to this agent.
 
 - To isolate why the call routed incorrectly lets inspect the execution trace in Flow Debugger.
 
@@ -237,6 +238,8 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 - Under Activity Inputs > Skills Logs, inspect the JSON trace. The payload highlights the skills enforced on the call:
 		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
 		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
+
+  <<<<<<<<<<<<<< Screen SHot >>>>>>>>>>>>
 
 {"requirements":[{"weight":1,"radioSkillName":"Static","radioCondition":"Static","skillName":"WebexOne__Spanish_Fluency","condition":"gte","radioValue":"Static","skill":"80468aea-74b7-4afb-a2d3-9d9c4e4f1f92","type":"proficiency","value":"5"},{"radioSkillName":"Static","radioCondition":"Static","skillName":"WebexOne_VIP_Support","condition":"eq","radioValue":"Static","skill":"e6a7297f-254b-483c-bb91-c5e2da8dda63","type":"boolean","value":"True"}],"relaxationToggle":false,"relaxations":[],"removeSkillsOnBlindTransfer":false}
 
