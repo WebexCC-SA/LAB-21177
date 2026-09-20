@@ -104,7 +104,7 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** that does the following:
 
-      ![Nav](./assets/21177_Excercise2.png){ width="500" }
+      ![Nav](./assets/21177_Excercise2_1_0.png){ width="500" }
 
 * **Step 1:** An incoming call enters via the Entry Point and triggers the **Menu** node.
   
@@ -274,7 +274,9 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
       ![Nav](./assets/21177_Excercise2_1.png){ width="500" }
 
-- Root Cause of this is although the Set Variable node set custom flow variables (Webexone_SPanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with Static skill values i.e. Spanish >= 5 and VIP = True). 
+- Root Cause of this is although the Set Variable node set custom flow variables (Webexone_SPanish_FV = 3 and Webexone_VIPCustomer_FV = False) as these the QueueContact node is configured with Static skill values i.e. Spanish >= 5 and VIP = True.
+
+- As Queue contact is configured with static value call gets tagged to these skills and not skill variablels offered by 
 
 - As a result, the queue forced a static VIP requirement of True (level 5) and spanish 5, which matches the logged-in agent's profile.
 
