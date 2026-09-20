@@ -173,7 +173,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Click **Save** to finalize and create the queue.
 
-**Update 2: Update the Flow with Queue and Skill Requirements**
+**Update 3: Update the Flow with Queue and Skill Requirements**
 
 <details>
 <summary><b>🎥 Video Walkthrough: Assign Queue to SBR Flow</b></summary>
@@ -235,7 +235,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 	- Username: Refer to your lab badge or contact your lab proctor.
 	- Password: Refer to your lab badge or contact your lab proctor.
 
-- On the login options screen, select Desktop as the telephony option, set the Team to WebexOne_Team_[num], and click Log In.
+- On the login options screen, select Desktop as the telephony option, set the Team to **WebexOne_Team_[num]** and click Log In.
 
 - Ensure the agent state is set to Available in the top-right corner of the Agent Desktop.
 
