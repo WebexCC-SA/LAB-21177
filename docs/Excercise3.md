@@ -102,7 +102,7 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 ## Section 2 : Implement Skill-Based Routing (SBR) in Flow 
 
-**Duplicate and Open the Flow Template**
+For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** that does the following:
 
 * **Step 1:** An incoming call enters via the Entry Point and triggers the **Menu** node.
   
@@ -114,16 +114,40 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 **Identify Required Flow Updates**
 
-- To test Skill-Based Routing (SBR) with this flow, you will make two specific updates:
+- To test Skill-Based Routing (SBR) with this flow, lets make the following changes:
 
-	- **Update 1**: **Queue Assignment:** Assign the designated Contact Center queue to the **Queue** node.
-	- **Update 2**: **Skill Configuration:** Define the required skill conditions in the **Skill Requirement** section of the **Queue** node.
+	- **Update 1**: **Clone the Flow**
+	- **Update 2**: **Queue Assignment:** Assign the designated Contact Center queue to the **Queue** node.
+	- **Update 3**: **Skill Configuration:** Define the required skill conditions in the **Skill Requirement** section of the **Queue** node.
 
-**Update 1 : Create the Skill-Based Queue**
 
-- For **Queue Assignement** lets create a skill based Queue and assign the contact center agent to the Queue, to configure 
+**Update 1: Clone the Flow**
 
-- In the **Contact Center** navigation pane, select **Queues** under the **Customer Experience** section.
+- In Contact Center navigation pane select "Flows" under customer experience section
+  
+- Search for the flow **WebexOne_Skill_Flow_Template**
+
+- On the right select the vertical ellipsis and select Copy to make a copy of the flow.
+
+- Open the Flow in the flow canvas and rename the flow **WebexOne_Skill_Flow_Template_<id>**
+
+- Validate and Publish the flow and close the canvas.
+
+- In the Contact Center navigation pane, select Flows under the Customer Experience section.
+
+- Search for the flow **WebexOne_Skill_Flow_Template**.
+
+- On the right side, click the kebab menu (three vertical dots) and select Copy to duplicate the flow.
+
+- Rename the flow to **WebexOne_Skill_Flow_Template_<id>**
+
+- Validate and Publish the flow, then close the canvas.
+
+**Update 2 : Create the Skill-Based Queue**
+
+- To assign the desired queue to the **Queue** node in the flow lets create a skill based Queue and assign the contact center agent to the Queue.
+
+- To configure, in the **Contact Center** navigation pane, select **Queues** under the **Customer Experience** section.
 
 - Click the **Create Queue** button.
 
@@ -147,12 +171,11 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 	* **Maximum Time in Queue:** `30` seconds
 	* **Default Music in Queue:** `defaultmusic_on_hold.wav`
 
-
 - Click **Save** to finalize and create the queue.
 
 **Update 2: Update the Flow with Queue and Skill Requirements**
 
-- Return to **Flows** section  and click your newly created flow row **Copy_webexOne_Skill_Flow_Template_<id>** to open it in **Flow Designer**.
+- Return to **Flows** section  and click your newly created flow row **WebexOne_Skill_Flow_Template_<id>** to open it in **Flow Designer**.
 
 - Click **Edit**  to modify the flow.
 
