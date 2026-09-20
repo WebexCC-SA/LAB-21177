@@ -257,7 +257,8 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Expected Logic: 
 	- Selecting Option 1 assigns variables tagging the call as a Non-VIP customer.
-    - The logged-in agent's profile requires VIP Support entitlement to handle incoming calls. Therefore, the call should not route to this agent.
+    - The logged-in agent's profile requires VIP Support entitlement to handle incoming calls.
+    - Therefore, the call should not route to this agent.
 
 - To isolate why the call routed incorrectly lets inspect the execution trace in Flow Debugger.
 
@@ -271,9 +272,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
 		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
 
-  <<<<<<<<<<<<<< Screen SHot >>>>>>>>>>>>
-
-{"requirements":[{"weight":1,"radioSkillName":"Static","radioCondition":"Static","skillName":"WebexOne__Spanish_Fluency","condition":"gte","radioValue":"Static","skill":"80468aea-74b7-4afb-a2d3-9d9c4e4f1f92","type":"proficiency","value":"5"},{"radioSkillName":"Static","radioCondition":"Static","skillName":"WebexOne_VIP_Support","condition":"eq","radioValue":"Static","skill":"e6a7297f-254b-483c-bb91-c5e2da8dda63","type":"boolean","value":"True"}],"relaxationToggle":false,"relaxations":[],"removeSkillsOnBlindTransfer":false}
+      ![Nav](./assets/21177_Excercise2_1.png){ width="500" }
 
 - Root Cause of this is although the Set Variable node set custom flow variables (Webexone_SPanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with Static skill values i.e. Spanish >= 5 and VIP = True). 
 
