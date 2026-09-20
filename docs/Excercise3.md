@@ -186,13 +186,11 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 	* **Skill Name:** Static > `WebexOne_VIP_Support`
 	* **Value:** Static > `True`
 
-**Validate and Publish the Flow**
-
 - Click **Validate** in the bottom right menu bar and ensure no error messages appear.
 
 - Click **Publish** to make the flow active for routing.
 
-- To route incoming calls to your newly defined skill-based agents, the published flow must be mapped to an inbound entry point channel, to configure 
+- Now, To route incoming calls to your newly defined skill-based agents, the published flow must be mapped to an inbound entry point channel, to configure 
 
 - In **Control Hub**, navigate to **Services** > **Contact Center**, then select **Channels** under the **Customer Experience** section.
 
@@ -200,7 +198,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Select the channel to open its configuration settings.
 
-- Under **Entry Point Settings**, navigate to the **Routing Flow** dropdown menu and select the published flow configured in the previous exercise (`webexOne_Skill_Flow_<Name>`).
+- Under **Entry Point Settings**, navigate to the **Routing Flow** dropdown menu and select the published flow configured in the previous exercise **WebexOne_Skill_Flow_Template_<id>**.
 
 - Click **Save** to apply the changes.
 
