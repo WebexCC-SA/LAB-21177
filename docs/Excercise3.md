@@ -14,11 +14,11 @@ The objective of this lab is to introduce the core concepts of Skill-Based Routi
 
 This exercise is divided into three hands-on sections:
 
-- **Section 1: Skill Profile Management**: Learn how to define skills (proficiency and boolean) and map them to agents using Skill Profiles.
+- **Skill Profile Management**: Learn how to define skills (proficiency and boolean) and map them to agents using Skill Profiles.
 
-- **Section 2: Dynamic Flow Configuration**: Explore advanced Flow Builder techniques to map call variables to skill requirements, driving targeted queue routing based on IVR selections.
+- **Dynamic Flow Configuration**: Explore advanced Flow Builder techniques to map call variables to skill requirements, driving targeted queue routing based on IVR selections.
 
-- **Section 3: Diagnostics & Troubleshooting**: Identify common skill-mapping and variable misconfigurations, isolate root causes using Flow Debugger execution traces and Analyzer CSR reports, and apply corrective routing logic.
+- **Diagnostics & Troubleshooting**: Identify common skill-mapping and variable misconfigurations, isolate root causes using Flow Debugger execution traces and Analyzer CSR reports, and apply corrective routing logic.
 
 ## Section 1 : Review Skills, Profiles, and Agent Entitlements 
 
