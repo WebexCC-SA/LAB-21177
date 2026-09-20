@@ -28,7 +28,7 @@ This exercise is divided into three hands-on sections:
   
 -  From the left navigation sidebar, go to **Services** and select **Contact Center**.
 
-- Navigate to **Customer Experience** > **Skill Management**.
+- Navigate to **User Management** > **Skill Management**.
   
 - On the **Skills** tab, locate the following pre-created skills:
 	* `WebexOne__Spanish_Fluency`
