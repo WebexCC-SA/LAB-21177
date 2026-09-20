@@ -263,7 +263,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 - To isolate why the call routed incorrectly lets inspect the execution trace in Flow Debugger.
 
 <details>
-<summary><b>🎥 Video Walkthrough: SBR Queue Creation</b></summary>
+<summary><b>🎥 Video Walkthrough: Troubleshoot SBR queue</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD8.mp4" type="video/mp4">
@@ -289,6 +289,14 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 - As a result, the queue enforces a static requirement for VIP = True and Spanish level 5, which happens to match the logged-in agent's skill profile.
 
 **Update Queue Node to Dynamic Skill Assignment**
+
+<details>
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD9.mp4" type="video/mp4">
+</video>
+</details>
 
 - To enforce the dynamic parameters set during IVR selection, convert the static skill requirements in the QueueContact node to dynamic variables.
 
