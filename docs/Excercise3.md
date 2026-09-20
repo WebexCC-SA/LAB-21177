@@ -145,8 +145,6 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 **Update 2 : Create the Skill-Based Queue**
 
-- To assign the desired queue to the **Queue** node in the flow lets create a skill based Queue and assign the contact center agent to the Queue.
-
 <details>
 <summary><b>🎥 Video Walkthrough: SBR Queue Creation</b></summary>
 <br>
@@ -155,6 +153,8 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 </video>
 </details>
   
+- To assign the desired queue to the **Queue** node in the flow lets create a skill based Queue and assign the contact center agent to the Queue.
+
 - To configure, in the **Contact Center** navigation pane, select **Queues** under the **Customer Experience** section.
 
 - Click the **Create Queue** button.
