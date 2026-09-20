@@ -42,7 +42,7 @@ The task is to Update the flow so the call transfers seamlessly to the correct d
 
 - To understand why this issue is occurring, start by inspecting the main flow.
 
-- In Control Hub, go to the Customer Experience section, select Flows, and search for your mapped flow: WebexOne_Flow_[num].
+- In Control Hub, go to the Customer Experience section, select Flows, and search for your mapped flow: **WebexOne_Flow_[num]**
   
       ![Nav](./assets/2310_Excercise2_1_2.png){ width="200" }
 
@@ -60,9 +60,11 @@ The task is to Update the flow so the call transfers seamlessly to the correct d
 
 - Confirm in the debug view that the call successfully passed through the Menu node when Option 1 was pressed.
 
-      ![Nav](./assets/2310_Excercise2_1_4_1.png){ width="500" }
+      ![Nav](./assets/2310_Excercise2_1_4_1.png){ width="700" }
 
 - Select the Bridge Transfer node. The execution outcome shows an error, and the Activity Output panel displays the cause: **UNSUPPORTED_DN**
+
+      ![Nav](./assets/2310_Excercise2_1_4_2.png){ width="700" }
   
 - This error represents the core of the problem, but why ? 
 
