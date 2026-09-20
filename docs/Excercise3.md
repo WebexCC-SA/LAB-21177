@@ -125,6 +125,14 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 **Update 1: Clone the Flow**
 
+<details>
+<summary><b>🎥 Video Walkthrough: Clone the Flowt</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD4.mp4" type="video/mp4">
+</video>
+</details>
+
 - In the Contact Center navigation pane, select Flows under the Customer Experience section.
 
 - Search for the flow **WebexOne_Skill_Flow_Template**.
@@ -136,6 +144,14 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 - Validate and Publish the flow, then close the canvas.
 
 **Update 2 : Create the Skill-Based Queue**
+
+<details>
+<summary><b>🎥 Video Walkthrough: SBR Queue Creation></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD5.mp4" type="video/mp4">
+</video>
+</details>
 
 - To assign the desired queue to the **Queue** node in the flow lets create a skill based Queue and assign the contact center agent to the Queue.
 
@@ -167,6 +183,14 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 **Update 2: Update the Flow with Queue and Skill Requirements**
 
+<details>
+<summary><b>🎥 Video Walkthrough: Assign Queue to SBR Flow</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD6.mp4" type="video/mp4">
+</video>
+</details>
+
 - Return to **Flows** section  and click your newly created flow row **WebexOne_Skill_Flow_Template_<id>** to open it in **Flow Designer**.
 
 - Click **Edit**  to modify the flow.
@@ -190,7 +214,15 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Click **Publish** to make the flow active for routing.
 
-- Now, To route incoming calls to your newly defined skill-based agents, the published flow must be mapped to an inbound entry point channel, to configure 
+- Now, To route incoming calls to your newly defined skill-based agents, the published flow must be mapped to an inbound entry point channel, to configure
+
+<details>
+<summary><b>🎥 Video Walkthrough: Map flow to EP</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD7.mp4" type="video/mp4">
+</video>
+</details>
 
 - In **Control Hub**, navigate to **Services** > **Contact Center**, then select **Channels** under the **Customer Experience** section.
 
