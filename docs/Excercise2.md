@@ -16,8 +16,11 @@ The objective of this exercise is to fix a call flow that fails during a transfe
 Current Call Flow & Problem is as follows 
 
       - First Leg: A customer calls and selects Option 1, which transfers the call to another department.
+      
       - Disconnect: This transfer forces the call to leave the system and re-enter through a new entry point, creating a separate call leg.
+      
       - Second Leg: In this new flow, the customer must select the User ID option to reach the correct team and agent.
+      
       - Core Issue: The transfer currently fails. The customer experiences dead air, and the call drops.
 
 The task is to Update the flow so the call transfers seamlessly to the correct destination while preserving and passing all original flow variables to the receiving agent.
