@@ -280,7 +280,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
 		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
 
-      ![Nav](./assets/21177_Excercise2_1.png){ width="700" }
+      ![Nav](./assets/21177_Excercise2_1.png){ width="900" }
 
 - The root cause is, although the Set Variable node defines custom flow variables (Webexone_Spanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with static skill requirements (Spanish >= 5 and VIP = True).
 
