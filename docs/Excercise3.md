@@ -24,6 +24,14 @@ This exercise is divided into three hands-on sections:
 
 **Verify Pre-created Skills:**
 
+<details>
+<summary><b>🎥 Video Walkthrough: Skill Management</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD1.mp4" type="video/mp4">
+</video>
+</details>
+
 - Log into [Webex Control Hub](https://admin.webex.com) with the provided credentials.
   
 -  From the left navigation sidebar, go to **Services** and select **Contact Center**.
@@ -43,6 +51,14 @@ This exercise is divided into three hands-on sections:
 
 **Verify the Skill Profile:**
 
+<details>
+<summary><b>🎥 Video Walkthrough: Skill Profile</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD2.mp4" type="video/mp4">
+</video>
+</details>
+
 A **Skill Profile** acts as a container grouping multiple skills together so you can assign them to agents at once.
 
 - In **Contact Center**, go to **User Management** > **Skill Profile**.
@@ -59,6 +75,14 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 | `WebexOne_VIP_Support` | BOOLEAN | True | Entitled to receive VIP-routed calls |
 
 **Assign the Skill Profile to a User:**
+
+<details>
+<summary><b>🎥 Video Walkthrough: Skill Profile map to Agent</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD3.mp4" type="video/mp4">
+</video>
+</details>
 
 - From the left navigation sidebar, select **User Management** > **Contact Center Users**.
 
