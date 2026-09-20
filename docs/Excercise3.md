@@ -262,6 +262,14 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - To isolate why the call routed incorrectly lets inspect the execution trace in Flow Debugger.
 
+<details>
+<summary><b>🎥 Video Walkthrough: SBR Queue Creation</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD8.mp4" type="video/mp4">
+</video>
+</details>
+
 - In Flow Builder, click Debug from the bottom menu bar.
 
 - Select the Interaction ID corresponding to your test call from the interaction list.
@@ -272,13 +280,13 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
 		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
 
-      ![Nav](./assets/21177_Excercise2_1.png){ width="500" }
+      ![Nav](./assets/21177_Excercise2_1.png){ width="700" }
 
-- Root Cause of this is although the Set Variable node set custom flow variables (Webexone_SPanish_FV = 3 and Webexone_VIPCustomer_FV = False) as these the QueueContact node is configured with Static skill values i.e. Spanish >= 5 and VIP = True.
+- The root cause is, although the Set Variable node defines custom flow variables (Webexone_Spanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with static skill requirements (Spanish >= 5 and VIP = True).
 
-- As Queue contact is configured with static value call gets tagged to these skills and not skill variablels offered by 
+- Because the QueueContact node uses static values, the call is assigned to these hardcoded skills rather than using the dynamic flow variables defined in the Set Variable node.
 
-- As a result, the queue forced a static VIP requirement of True (level 5) and spanish 5, which matches the logged-in agent's profile.
+- As a result, the queue enforces a static requirement for VIP = True and Spanish level 5, which happens to match the logged-in agent's skill profile.
 
 **Update Queue Node to Dynamic Skill Assignment**
 
