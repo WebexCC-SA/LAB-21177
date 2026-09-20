@@ -104,6 +104,8 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** that does the following:
 
+      ![Nav](./assets/21177_Excercise2.png){ width="500" }
+
 * **Step 1:** An incoming call enters via the Entry Point and triggers the **Menu** node.
   
 * **Step 2:** The customer hears an IVR greeting and is prompted to make a selection:
