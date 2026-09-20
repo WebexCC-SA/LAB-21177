@@ -125,16 +125,6 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 **Update 1: Clone the Flow**
 
-- In Contact Center navigation pane select "Flows" under customer experience section
-  
-- Search for the flow **WebexOne_Skill_Flow_Template**
-
-- On the right select the vertical ellipsis and select Copy to make a copy of the flow.
-
-- Open the Flow in the flow canvas and rename the flow **WebexOne_Skill_Flow_Template_<id>**
-
-- Validate and Publish the flow and close the canvas.
-
 - In the Contact Center navigation pane, select Flows under the Customer Experience section.
 
 - Search for the flow **WebexOne_Skill_Flow_Template**.
