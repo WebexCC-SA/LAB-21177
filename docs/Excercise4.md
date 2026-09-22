@@ -65,13 +65,9 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 
 ## Section 3: Troubleshooting and Correcting the Blind Transfer Failure
 
-To troubleshoot a blind transfer failure, lets inspect two toold 
-	- first, **Flow Debugger** interaction trace & 
-	- **Analyzer Customer Session Record (CSR)** report to identify the root cause.
-
 To troubleshoot a blind transfer failure, let's inspect two tools:
-	- First, the **Flow Debugger** for interaction trace
-	- Second, the **Analyzer Customer Session Record (CSR)** report to identify the root cause
+- First, the **Flow Debugger** for interaction trace
+- Second, the **Analyzer Customer Session Record (CSR)** report to identify the root cause
 
 **Step 1: Retrieve the Interaction ID from Flow Debugger**
 
