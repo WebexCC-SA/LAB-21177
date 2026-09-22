@@ -83,7 +83,7 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 
 - Click **Visualization**, then double-click your personal user folder: `WebexOne_Report_User[num]`.
 
-- Open the pre-configured report named **CSR Report on SBR** (a pre-built copy of the stock Customer Session Record report).
+- A pre-configured report named **CSR Report on SBR** (a pre-built copy of the stock Customer Session Record report) is present. 
 
 !!! Note 
 This report is  pre-populated with several Row Segments to simplify setup:
@@ -94,7 +94,7 @@ This report is  pre-populated with several Row Segments to simplify setup:
 	> * `Matched Skills`
 	> * `Previous Agent Name`
 	> * `Queue Name`
-	> * `Agent Name` etc 
+	> * `Agent Name`
 
 - Click **Edit** to modify the report layout.
 
@@ -114,7 +114,7 @@ This report is  pre-populated with several Row Segments to simplify setup:
 	* `Transferred Queue Name`: The queue to which the agent transferred the call.
 	* `Agent Name`: The final agent who received the transferred call.
 
-- **Observation:** The `Transferred Queue Name` displays the correct queue, but **`Agent Name`** still displays the original agent, indicating the transfer was unsuccessful.
+- **Observation:** The **`Queue Name`** displays the correct queue, but **`Agent Name`** which is the agent receiving the call after transfer still displays the original agent, indicating the transfer was unsuccessful.
 
 ## Section 4: Add Termination Fields to Isolate Root Cause
 
@@ -178,12 +178,11 @@ To determine why the transfer failed and which component terminated the call, ad
 }
 
 ```
-
 - Notice that `"removeSkillsOnBlindTransfer"` is set to `false`.
 
 - Now, Update the Flow and Enable Skill Removal
 
-- Open your flow in **Flow Designer** and click **Edit** (or toggle **Edit** to **ON**).
+- Click **Design** and toggle **Edit** radio button to **ON**.
 
 - Click the **QueueContact** node on the canvas to open its properties panel.
 
