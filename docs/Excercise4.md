@@ -71,9 +71,9 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 
 **Step 1: Retrieve the Interaction ID from Flow Debugger**
 
-- In **Flow Builder**, click **Debug** in the bottom action bar.
+- In **Flow Builder**, tap into the flow that was built in **Excercise 3** and click **Debug** in the bottom action bar.
 
-- Locate the failed call in the interaction list and note down its **Interaction ID**.
+- Locate the latest failed call in the interaction list and note down its **Interaction ID** in a notepad. 
 
 **Step 2: Open and Configure the Analyzer CSR Report**
 
@@ -84,15 +84,17 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 - Click **Visualization**, then double-click your personal user folder: `WebexOne_Report_User[num]`.
 
 - Open the pre-configured report named **CSR Report on SBR** (a pre-built copy of the stock Customer Session Record report).
-> **Note:** This report is  pre-populated with several Row Segments to simplify setup:
+
+!!! Note 
+This report is  pre-populated with several Row Segments to simplify setup:
 	> * `EntryPointName`
 	> * `ContactSessionID`
 	> * `FirstQueueName`
 	> * `Required Skills`
 	> * `Matched Skills`
-	> * `First Agent Name`
+	> * `Previous Agent Name`
 	> * `Queue Name`
-	> * `Final Agent Name`
+	> * `Agent Name` etc 
 
 - Click **Edit** to modify the report layout.
 
@@ -108,11 +110,11 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 	* `FirstQueueName`: The initial queue where the call landed.
 	* `Required Skills`: Skills required for initial call presentation to the agent.
 	* `Matched Skills`: The agent skills matched during routing.
-	* `First Agent Name`: Name of the agent who answered the initial call.
+	* `Previous Agent Name`: Name of the agent who answered the initial call.
 	* `Transferred Queue Name`: The queue to which the agent transferred the call.
-	* `Last Agent Name`: The final agent who received the transferred call.
+	* `Agent Name`: The final agent who received the transferred call.
 
-- **Observation:** The `Transferred Queue Name` displays the correct queue, but `Last Agent Name` still displays the original agent, indicating the transfer was unsuccessful.
+- **Observation:** The `Transferred Queue Name` displays the correct queue, but **`Agent Name`** still displays the original agent, indicating the transfer was unsuccessful.
 
 ## Section 4: Add Termination Fields to Isolate Root Cause
 
