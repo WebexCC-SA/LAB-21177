@@ -10,9 +10,6 @@ Please use the following credentials to connect to Control Hub and configure Web
 | `Password`       | webexONE1! |
 
 
-!!! info
-	This task showcases available WebRTC call data and statistics using built-in browser tools and simulates missing audio during the call.
-
 ## Objective 
 
 In this lab, you will explore how skill requirements attached to an inbound call behave when an agent performs a blind transfer directly to a skill-based queue.
@@ -64,7 +61,7 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 
 - Observe the transfer behavior
 
-- The call drops immediately instead of connecting to the available proctor agent **`labuser31@wx1.wbx.ai`**.
+- The call drops immediately instead of connecting to the available proctor agent **`labuser31`**.
 
 ## Section 3: Troubleshooting and Correcting the Blind Transfer Failure
 
