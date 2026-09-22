@@ -18,12 +18,19 @@ In this lab, you will explore how skill requirements attached to an inbound call
 A customer calls in and selects **Option 0**. The call is routed to a logged-in agent matching the required skills. The agent then attempts a blind transfer to a pre-defined queue from the Agent Desktop. However, instead of connecting to an available agent in that queue, the call fails.
 
 **Task:**
-1. **Troubleshoot the Failure:** Identify why the transferred call drops or fails to route.
-2. **Apply Corrective Logic:** Troubleshoot the issue Update the contact flow to handle transferred skill attributes properly.
-3. **Verify Call Completion:** Perform a successful blind transfer to an available agent.
-4. **Build a Journey Report:** Create a custom Analyzer report that maps the complete end-to-end call lifecycle across Labs 2 and 3, displaying the exact skills associated with each call leg.
+- **Troubleshoot the Failure:** Identify why the transferred call drops or fails to route.
+- **Apply Corrective Logic:** Troubleshoot the issue Update the contact flow to handle transferred skill attributes properly.
+- **Verify Call Completion:** Perform a successful blind transfer to an available agent.
+- **Build a Journey Report:** Create a custom Analyzer report that maps the complete end-to-end call lifecycle across Labs 2 and 3, displaying the exact skills associated with each call leg.
 
 ## Section 1: Review the Transfer Queue Configuration
+
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD10.mp4" type="video/mp4">
+</video>
+</details>
 
 - Before attempting the transfer lets inspect the pre-configured target queue to verify its routing settings and assigned team.
 
@@ -45,6 +52,14 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 
 ## Section 2: Initiate Call and Experience the Transfer Failure
 
+<details>
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD11.mp4" type="video/mp4">
+</video>
+</details>
+
 - Log into your **Agent Desktop** and ensure your state is set to **Available**.
 
 - From your mobile device, dial your assigned entry point Dialed Number (DN) and press **Option 0** to route the call to your agent session.
@@ -64,6 +79,14 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 - The call drops immediately instead of connecting to the available proctor agent **`labuser31`**.
 
 ## Section 3: Troubleshooting and Correcting the Blind Transfer Failure
+
+<details>
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD12.mp4" type="video/mp4">
+</video>
+</details>
 
 To troubleshoot a blind transfer failure, let's inspect two tools:
 - First, the **Flow Debugger** for interaction trace
@@ -118,6 +141,13 @@ This report is  pre-populated with several Row Segments to simplify setup:
 
 ## Section 4: Add Termination Fields to Isolate Root Cause
 
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD13.mp4" type="video/mp4">
+</video>
+</details>
+
 To determine why the transfer failed and which component terminated the call, add specific termination fields to the report:
 
 - Return to the **Visualization** edit page for your report.
@@ -142,6 +172,13 @@ To determine why the transfer failed and which component terminated the call, ad
 - The underlying cause is a **Skill Carryover Conflict**. By default, when an agent performs a blind transfer, the system carries over the initial call's required skills (`Spanish >= 5`, `VIP = True`). Because the receiving agent in `WebexOne_Team_31` does not hold those exact matching attributes, no eligible agent is found.
 
 ## Section 5: Identify Root Cause via Flow Debugger
+
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD14.mp4" type="video/mp4">
+</video>
+</details>
 
 - Return to **Flow Debugger** and inspect the **QueueContact** activity log for this call.
 
