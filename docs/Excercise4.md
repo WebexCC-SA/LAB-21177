@@ -25,7 +25,7 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 
 ## Section 1: Review the Transfer Queue Configuration
 
-<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<summary><b>🎥 Video Walkthrough: Transfer Queue Configuration</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD10.mp4" type="video/mp4">
@@ -53,7 +53,7 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 ## Section 2: Initiate Call and Experience the Transfer Failure
 
 <details>
-<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<summary><b>🎥 Video Walkthrough: Agent Transfer Failure</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD11.mp4" type="video/mp4">
@@ -81,7 +81,7 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 ## Section 3: Troubleshooting and Correcting the Blind Transfer Failure
 
 <details>
-<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<summary><b>🎥 Video Walkthrough: Transfer Troubleshooting via Report</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD12.mp4" type="video/mp4">
@@ -141,7 +141,7 @@ This report is  pre-populated with several Row Segments to simplify setup:
 
 ## Section 4: Add Termination Fields to Isolate Root Cause
 
-<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<summary><b>🎥 Video Walkthrough: Transfer Troubleshooting via Report</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD13.mp4" type="video/mp4">
@@ -173,7 +173,7 @@ To determine why the transfer failed and which component terminated the call, ad
 
 ## Section 5: Identify Root Cause via Flow Debugger
 
-<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<summary><b>🎥 Video Walkthrough: Root Cause and Flow Correction</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD14.mp4" type="video/mp4">
