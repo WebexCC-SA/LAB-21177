@@ -108,15 +108,16 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 
 - A pre-configured report named **CSR Report on SBR** (a pre-built copy of the stock Customer Session Record report) is present. 
 
-!!! Note  This report is  pre-populated with several Row Segments to simplify setup:
-	> * `EntryPointName`
-	> * `ContactSessionID`
-	> * `FirstQueueName`
-	> * `Required Skills`
-	> * `Matched Skills`
-	> * `Previous Agent Name`
-	> * `Queue Name`
-	> * `Agent Name`
+!!! Note  
+This report is  pre-populated with several Row Segments to simplify setup:
+	- `EntryPointName`
+	- `ContactSessionID`
+	- `FirstQueueName`
+	- `Required Skills`
+	- `Matched Skills`
+	- `Previous Agent Name`
+	- `Queue Name`
+	- `Agent Name`
 
 - Click **Edit** to modify the report layout.
 
@@ -140,7 +141,8 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 
 ## Section 4: Add Termination Fields to Isolate Root Cause
 
-<summary><b>🎥 Video Walkthrough: Transfer Troubleshooting via Report</b></summary>
+<details>
+<summary><b>🎥 Video Walkthrough:Transfer Troubleshooting via Repor</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD13.mp4" type="video/mp4">
@@ -172,6 +174,7 @@ To determine why the transfer failed and which component terminated the call, ad
 
 ## Section 5: Identify Root Cause via Flow Debugger
 
+<details>
 <summary><b>🎥 Video Walkthrough: Root Cause and Flow Correction</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
