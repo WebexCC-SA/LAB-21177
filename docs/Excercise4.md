@@ -25,6 +25,7 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 
 ## Section 1: Review the Transfer Queue Configuration
 
+<details>
 <summary><b>🎥 Video Walkthrough: Transfer Queue Configuration</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
@@ -81,6 +82,7 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 ## Section 3: Troubleshooting and Correcting the Blind Transfer Failure
 
 To troubleshoot a blind transfer failure, let's inspect two tools:
+
 	- First, the **Flow Debugger** for interaction trace
 	- Second, the **Analyzer Customer Session Record (CSR)** report to identify the root cause
 
@@ -116,16 +118,16 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 
 - A pre-configured report named **CSR Report on SBR** (a pre-built copy of the stock Customer Session Record report) is present. 
 
-!!! Note  
-This report is  pre-populated with several Row Segments to simplify setup:
-	- `EntryPointName`
-	- `ContactSessionID`
-	- `FirstQueueName`
-	- `Required Skills`
-	- `Matched Skills`
-	- `Previous Agent Name`
-	- `Queue Name`
-	- `Agent Name`
+> [!NOTE]
+> This report is pre-populated with several Row Segments to simplify setup:
+> - `EntryPointName`
+> - `ContactSessionID`
+> - `FirstQueueName`
+> - `Required Skills`
+> - `Matched Skills`
+> - `Previous Agent Name`
+> - `Queue Name`
+> - `Agent Name`
 
 - Click **Edit** to modify the report layout.
 
