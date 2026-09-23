@@ -80,6 +80,12 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 
 ## Section 3: Troubleshooting and Correcting the Blind Transfer Failure
 
+To troubleshoot a blind transfer failure, let's inspect two tools:
+	- First, the **Flow Debugger** for interaction trace
+	- Second, the **Analyzer Customer Session Record (CSR)** report to identify the root cause
+
+**Step 1: Retrieve the Interaction ID from Flow Debugger**
+
 <details>
 <summary><b>🎥 Video Walkthrough: Transfer Troubleshooting via Report</b></summary>
 <br>
@@ -88,17 +94,19 @@ A customer calls in and selects **Option 0**. The call is routed to a logged-in 
 </video>
 </details>
 
-To troubleshoot a blind transfer failure, let's inspect two tools:
-- First, the **Flow Debugger** for interaction trace
-- Second, the **Analyzer Customer Session Record (CSR)** report to identify the root cause
-
-**Step 1: Retrieve the Interaction ID from Flow Debugger**
-
 - In **Flow Builder**, tap into the flow that was built in **Excercise 3** and click **Debug** in the bottom action bar.
 
 - Locate the latest failed call in the interaction list and note down its **Interaction ID** in a notepad. 
 
 **Step 2: Open and Configure the Analyzer CSR Report**
+
+<details>
+<summary><b>🎥 Video Walkthrough:Transfer Troubleshooting via Repor</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD13-1.mp4" type="video/mp4">
+</video>
+</details>
 
 - In **Control Hub**, navigate to **Services** > **Contact Center** and select **Overview**.
 
@@ -145,7 +153,7 @@ This report is  pre-populated with several Row Segments to simplify setup:
 <summary><b>🎥 Video Walkthrough:Transfer Troubleshooting via Repor</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
-  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD13.mp4" type="video/mp4">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD13-2.mp4" type="video/mp4">
 </video>
 </details>
 
