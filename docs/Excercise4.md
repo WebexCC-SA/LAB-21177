@@ -129,6 +129,18 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 > - `Queue Name`
 > - `Agent Name`
 
+!!! note "Note"
+    This report is pre-populated with several Row Segments to simplify setup:
+    
+    * `EntryPointName`
+    * `ContactSessionID`
+    * `FirstQueueName`
+    * `Required Skills`
+    * `Matched Skills`
+    * `Previous Agent Name`
+    * `Queue Name`
+    * `Agent Name`
+
 - Click **Edit** to modify the report layout.
 
 - Ensure the report time range filter is set to **Today**.
