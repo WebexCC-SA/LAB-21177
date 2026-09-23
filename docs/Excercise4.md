@@ -108,8 +108,7 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 
 - A pre-configured report named **CSR Report on SBR** (a pre-built copy of the stock Customer Session Record report) is present. 
 
-!!! Note 
-This report is  pre-populated with several Row Segments to simplify setup:
+!!! Note  This report is  pre-populated with several Row Segments to simplify setup:
 	> * `EntryPointName`
 	> * `ContactSessionID`
 	> * `FirstQueueName`
