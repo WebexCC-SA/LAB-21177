@@ -47,7 +47,7 @@ By completing this module, participants will be able to:
 <summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
-  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD14.mp4" type="video/mp4">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD15.mp4" type="video/mp4">
 </video>
 </details>
 
