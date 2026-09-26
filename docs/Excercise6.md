@@ -70,6 +70,15 @@ In this lab exercise, the audience will gain hands-on experience configuring WxC
 
       ![Nav](./assets/2310_Excercise3_1_8.png){ width="750" }
 
+- For **Routing Flow** field From the dropdown, select the flow "**WebexOne_OutdialUser[num]_Flow**" and fill in these fields:
+      - Music on hold: "defaultmusic_on_hold"
+      - Version label: Latest
+      - Outdial Queue: Select the queue that was created in step 1 of your initial setup.
+
+      ![Nav](./assets/2310_Excercise3_1_6.1.png){ width="800" }
+
+- Save the settings.
+
 - After these settings are added, click Create to finalize the channel.
 
 - Since outdial is an agent activity, the Agent Desktop should have the capability to call any number outside the WxCC ecosystem. 
