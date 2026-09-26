@@ -33,7 +33,7 @@ By completing this module, participants will be able to:
 
 - Under Desktop Experience, select AI Features.
 
-      ![Nav](./assets/21177_Excercise5_1.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_1.1.png){ width="500" }
 
 - Open the AI Routing configuration page.
 
@@ -67,13 +67,13 @@ By completing this module, participants will be able to:
 
 - In our lab setup, the check will indicate low potential because the queue lacks sufficient agent density and call volume.
 
-      ![Nav](./assets/21177_Excercise5_2.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_2.1.png){ width="500" }
 
 - Regardless of the low potential result, click Evaluation Mode.
 
 - Confirm the prompt to start shadow execution.
 
-      ![Nav](./assets/21177_Excercise5_3.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_3.1.png){ width="500" }
   
 - Now, In Evaluation Mode, incoming calls to this flow continue to follow standard routing logic.
   
