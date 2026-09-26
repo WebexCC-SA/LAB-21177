@@ -190,6 +190,70 @@ In this lab exercise, the audience will gain hands-on experience configuring WxC
 
 - For ease, one can copy the error message into a Notepad or Notepad++ application.
 
+- Let's leverage AI to help analyze this error message.
+
+- Use Gemini, ChatGPT, or any AI assistant of your choice. 
+
+- Instruct the AI agent to analyze the error message and provide a final conclusion on the issue.
+
+- Prompt used in this example with Gemini:
+
+<details>
+<summary><b>Click to expand: WxCC Outdial Log Analysis Prompt</b></summary>
+
+<br>
+
+```text
+Act as a Senior Webex Contact Center (WxCC) Administrator and Technical Lead specializing in SIP telephony, WebRTC, and Agent Desktop API integrations.
+
+Task:
+Analyze the provided Agent Desktop browser logs (Console, Network/XHR/WebSocket, and WxCC Desktop error reports) to diagnose a failed outdial call attempt. Determine the precise technical root cause and provide actionable remediation steps.
+
+Structure your analysis using the following layout:
+
+1. Executive Summary:
+   - Provide a brief, 2-sentence summary of the issue, the primary error code/message observed, and the identified root cause.
+
+2. Diagnostic Log Breakdown:
+   - Trace the exact timeline of the call attempt (timestamps, HTTP status codes, SIP responses, REST API endpoint calls like /desktop/v1/user/outdial or WebSocket events).
+   - Highlight key log entries, tracking IDs, and failure points (e.g., SIP 403 Forbidden, 404 Not Found, 486 Busy, HTTP 400 Bad Request, WebSocket drops, or Dial Plan mismatch errors).
+
+3. Root Cause Identification:
+   - Pinpoint the exact configuration or technical failure (e.g., Outdial Dial Plan misconfiguration, missing Outdial Entry Point/Queue mapping, ANI validation failure, WebRTC/Cisco Calling extension registration issue, or PSTN gateway/SBC rejection).
+
+4. Recommended Corrective Actions:
+   - Step 1: Agent/Desktop Level Fixes (if applicable).
+   - Step 2: Control Hub / WxCC Management Portal Configurations (e.g., Dial Plans, Outdial Flows, Desktop Profile permissions).
+   - Step 3: Telephony & Gateway Verification (e.g., Calling Platform, SBC/CPOP routes, Local Gateway config).
+
+Here are the browser logs / error details to analyze:
+[PASTE YOUR BROWSER LOGS OR ERROR MESSAGE HERE]
+```
+
+</details>
+
+- You can copy paste this prompt along with the Error message 
+
+- The AI analysis Root cause Identification section clearly states the issue is with the flow. 
+
+- Lets review the flow to see how its configured 
+
+- In the Contact Center navigation pane, select Flows under the Customer Experience section.
+
+- Search for the flow **WebexOne_OutdialUser[NUM]_Flow**
+
+- Click on the "Debug" option and review the last call
+
+- You will notice that the call passed through the "NewPhoneContact" node, and at QueueContact Node failed 
+
+- The failure occurs because an agent-initiated outdial call does not require a Queue Contact node. This is a common mistake made in the field, where inbound flow logic and nodes are incorrectly reused for outdial scenarios.
+
+- To correct this, come back into the Design section of the flow and click on the "Edit" option in the flow.
+
+- Delete the QueueContact Node , search for the End Flow node , Drag it to the new phone contact node and connect both the nodes 
+
+- Toggle "Validation" to "On" to ensure there are no validation errors, and then publish the flow.
+
 - Search for "error," and at the bottom of the error message, you will notice there is a fetch error on "**Config**" – "**Config_fetch_error**." The exact config it's talking about is "**queuemgr**" which basically means queue.
 
       ![Nav](./assets/2310_Excercise3_1_21.png){ width="800" } ![Nav](./assets/2310_Excercise3_1_21_1.png){ width="400" }
