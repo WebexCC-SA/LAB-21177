@@ -91,7 +91,7 @@ By completing this module, participants will be able to:
 
 - However, take a look at the screenshot below to see the steps required to apply AI Routing after Evaluation Mode completes in 5 days. 
 
-      ![Nav](./assets/21177_Excercise5_4.2.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_4.5.png){ width="500" }
 
 - The toggle  Blue indicates that Live AI Routing is now active for this queue, and real-time contacts will now be routed dynamically using the trained AI mode.
 
