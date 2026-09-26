@@ -97,17 +97,17 @@ In this lab exercise, the audience will gain hands-on experience configuring WxC
 
       ![Nav](./assets/2310_Excercise3_1_11.png){ width="700" }
 
-- Move to "Dial Plans" by clicking Next button (at the bottom of the screen) a couple of times.
+- Move to **Voice** section by clicking Next button (at the bottom of the screen) a couple of times.
 
 - Enable "**Outdial**".
       - Select the newly create entrypoint as an "**Outdial Entry Point**".
       - Select the preconfigured address book "**WebexOne_outdial_AddressBook**" as an "**Address Book**".
 
-      ![Nav](./assets/2310_Excercise3_1_12.png){ width="700" }
+      ![Nav](./assets/2310_Excercise3_1_12.1.png){ width="700" }
 
-- Move to "Voice Channel Options" by clicking Next and ensure that "Desktop" is enabled under "Voice Channels options".
+- In **Voice Channel Options** below ensure that "Desktop" is enabled.
 
-      ![Nav](./assets/2310_Excercise3_1_13.png){ width="700" }
+      ![Nav](./assets/2310_Excercise3_1_13.1.png){ width="700" }
 
 - Proceed to the end of desktop profile creation by clicking Next and finally Create.
 
