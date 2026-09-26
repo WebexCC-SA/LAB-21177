@@ -234,12 +234,12 @@ Here are the browser logs / error details to analyze:
 
 - The AI analysis Root cause Identification section clearly states the issue is with the flow.
 
-      ![Nav](./assets/2310_Excercise3_1_18.2.png){ width="500" }
+      ![Nav](./assets/2310_Excercise3_1_18.2.png){ width="700" }
 
 - Lets review the flow to see how its configured
 
 <details>
-<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<summary><b>🎥 Video Walkthrough: Outdial flow Correction</b></summary>
 <br>
 <video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
   <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD16.mp4" type="video/mp4">
@@ -300,7 +300,7 @@ Here are the browser logs / error details to analyze:
 
 - In the Outdial ANI field, select **WebexOne_Outdial_ANI** and save your changes.
 
-      ![Nav](./assets/2310_Excercise3_1_26.png){ width="700" }
+      ![Nav](./assets/2310_Excercise3_1_26.1.png){ width="700" }
 
 - Now, Perform an Outdial Call Using the Custom ANI.
 
