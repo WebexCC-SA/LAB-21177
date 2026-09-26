@@ -12,17 +12,18 @@ Please use the following credentials to connect to Control Hub and configure Web
 
 Traditional contact center routing relies on static, rigid skill assignments that often lead to misrouted contacts, higher average handle times (AHT), and administrative overhead. In this lab module, we will learn how to configure and leverage Webex Contact Center Personalized AI Routing. 
 
-By completing this module, prticipants will be able to:
+By completing this module, participants will be able to:
 
 - **Understand the Core Value**: Learn how multi-dimensional AI dynamic matchmaking optimizes routing based on operational metrics like Handle Time.
 
-- **Review Global Configuration**: Review AI Routing at the organization level and Perform bulk Optimization Checks and initiate Evaluation Mode (Shadow Mode).
+- **Review Global Configuration**: Review AI Routing at the organization level and Perform bulk Optimization Checks and initiate Evaluation Mode or Shadow Mode.
 
 - **Learn the Concept of Shadow Mode**: Learn how AI models predict handle-time reductions without altering live call flows.
 
 - **Analyze Predictive Performance**: Review AI handle-time prediction models in analyzer against baseline queue historical performance.
 
-Note: Because this lab environment does not feature active live call traffic an existing pre-populated queue **WebexOne_SkillQueueFlow** has been provided to explore confguration and performance dashboards.
+!!! Note
+Because this lab environment does not carry active live call traffic an existing pre-populated queue **WebexOne_SkillQueueFlow** has been provided to explore confguration and performance dashboards.
 
 ## Section 1 : Review Org-Level Enablement Setting 
 
