@@ -22,16 +22,18 @@ By completing this module, participants will be able to:
 
 - **Analyze Predictive Performance**: Review AI handle-time prediction models in analyzer against baseline queue historical performance.
 
-!!! Note
-Because this lab environment does not carry active live call traffic an existing pre-populated queue **WebexOne_SkillQueueFlow** has been provided to explore confguration and performance dashboards.
+!!! note "Note"
+	Because this lab environment does not carry active live call traffic an existing pre-populated queue **WebexOne_SkillQueueFlow** has been provided to explore confguration and performance dashboards.
 
-## Section 1 : Review Org-Level Enablement Setting 
+### Section 1 : Review Org-Level Enablement Setting 
 
 - Log in to Control Hub as an Administrator.
 
 - Navigate to Services > Contact Center.
 
 - Under Desktop Experience, select AI Features.
+
+      ![Nav](./assets/21177_Excercise5_1.png){ width="500" }
 
 - Open the AI Routing configuration page.
 
@@ -41,25 +43,41 @@ Because this lab environment does not carry active live call traffic an existing
 
 ### Section 2: Queue Optimization & Evaluation Mode Setup
 
+<details>
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD14.mp4" type="video/mp4">
+</video>
+</details>
+
 - Select the Queues tab on the AI Routing page.
 
-- Select the queue created in the previous Skill-Based Routing lab: WebexOne_SBR_Queue_[name]
+- Select the queue created in the previous Skill-Based Routing lab 3: **WebexOne_SBR_Queue_[name]**
 
 - Click Run Optimization Check.
 
-- In the KPI selection section, choose the stock metric Handle Time.
+- In the KPI selection section, choose the stock metric **Handle Time**.
 
 - Click Next, then click Run Optimization Check.
 
-- Observe the validation results: The system evaluates whether the queue has sufficient agent density, interaction volume, and potential optimization gain for your chosen KPI.
+- Observe the validation results , you may have to refresh the browser:
+
+- The system evaluates whether the queue has sufficient agent density, interaction volume, and potential optimization gain for your chosen KPI.
 
 - In our lab setup, the check will indicate low potential because the queue lacks sufficient agent density and call volume.
+
+      ![Nav](./assets/21177_Excercise5_2.png){ width="500" }
 
 - Regardless of the low potential result, click Evaluation Mode.
 
 - Confirm the prompt to start shadow execution.
 
-- Now, In Evaluation Mode, incoming calls to this flow continue to follow standard routing logic. Meanwhile, the AI engine operates in the background to generate handle-time optimization predictions.
+      ![Nav](./assets/21177_Excercise5_3.png){ width="500" }
+  
+- Now, In Evaluation Mode, incoming calls to this flow continue to follow standard routing logic.
+  
+- Meanwhile, the AI engine operates in the background to generate handle-time optimization predictions.
 
 ### Section 3: Reviewing a Completed Evaluation Queue
 
@@ -73,12 +91,7 @@ Because this lab environment does not carry active live call traffic an existing
 
 - However, take a look at the screenshot below to see the steps required to apply AI Routing after Evaluation Mode completes in 5 days. 
 
-      ![Nav](./assets/21177_Excercise5_1.png){ width="200" }
-
-- Review the queue status section in it before the toggle switch to apply AI Routing was enabled: 
-	- **KPI Selected**: Handle Time
-	- **Potential**: This queue has high potential for AI Routing and offers analyzer report to review. 
-	- **Analyzer Link**: Analyzer report which highlgihts how AI routing is behaving.
+      ![Nav](./assets/21177_Excercise5_1.png){ width="500" }
 
 - The toggle  Blue indicates that Live AI Routing is now active for this queue, and real-time contacts will now be routed dynamically using the trained AI mode.
 
