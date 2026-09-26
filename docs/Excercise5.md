@@ -91,7 +91,7 @@ By completing this module, participants will be able to:
 
 - However, take a look at the screenshot below to see the steps required to apply AI Routing after Evaluation Mode completes in 5 days. 
 
-      ![Nav](./assets/21177_Excercise5_4.1.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_4.2.png){ width="500" }
 
 - The toggle  Blue indicates that Live AI Routing is now active for this queue, and real-time contacts will now be routed dynamically using the trained AI mode.
 
@@ -113,7 +113,7 @@ By completing this module, participants will be able to:
 
 - However, all metric tiles will display 0 or 00:00:00, and the charts will show "No data available to render the visualization."
 
-      ![Nav](./assets/21177_Excercise5_2.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_4.1.png){ width="500" }
 
 - This is expected because our lab queue has processed minimal or no live calls during the evaluation window.
 
