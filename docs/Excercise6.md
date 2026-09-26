@@ -148,11 +148,11 @@ In this lab exercise, the audience will gain hands-on experience configuring WxC
 
 - Select the profile that's mapped to the agent you are working with.
 
-- Navigate to the Dial Plans tab. 
+- Navigate to the Voice tab. 
 
 - Enable the dial plan functionality and select US as the dial plan. Then, click Save.
 
-      ![Nav](./assets/2310_Excercise3_1_18.png){ width="800" }
+      ![Nav](./assets/2310_Excercise3_1_18.1.png){ width="800" }
 
 - Refresh the Agent Desktop application browser. 
 
