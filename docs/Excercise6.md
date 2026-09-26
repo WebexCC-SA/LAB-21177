@@ -234,9 +234,19 @@ Here are the browser logs / error details to analyze:
 
 - You can copy paste this prompt along with the Error message 
 
-- The AI analysis Root cause Identification section clearly states the issue is with the flow. 
+- The AI analysis Root cause Identification section clearly states the issue is with the flow.
 
-- Lets review the flow to see how its configured 
+      ![Nav](./assets/2310_Excercise3_1_18.2.png){ width="500" }
+
+- Lets review the flow to see how its configured
+
+<details>
+<summary><b>🎥 Video Walkthrough: Setting SBR Queue Correctly</b></summary>
+<br>
+<video style="width: 100%; max-width: 800px; height: auto;" controls controlsList="nodownload" preload="metadata">
+  <source src="https://raw.githubusercontent.com/WebexCC-SA/LAB-21177/main/docs/assets/VD16.mp4" type="video/mp4">
+</video>
+</details>
 
 - In the Contact Center navigation pane, select Flows under the Customer Experience section.
 
@@ -253,27 +263,6 @@ Here are the browser logs / error details to analyze:
 - Delete the QueueContact Node , search for the End Flow node , Drag it to the new phone contact node and connect both the nodes 
 
 - Toggle "Validation" to "On" to ensure there are no validation errors, and then publish the flow.
-
-- Search for "error," and at the bottom of the error message, you will notice there is a fetch error on "**Config**" – "**Config_fetch_error**." The exact config it's talking about is "**queuemgr**" which basically means queue.
-
-      ![Nav](./assets/2310_Excercise3_1_21.png){ width="800" } ![Nav](./assets/2310_Excercise3_1_21_1.png){ width="400" }
-
-- This overall means the system is not able to fetch the team details from the queue perspective where agent resides. 
-
-- In WxCC, a queue is always mapped to an entry point via routing flows, so let's go back to the Entry Point for outdial and check the configuration again.
-
-- Via Control Hub, under "Customer Experience," go back via "Channel" to the Outdial Entry Point that was configured.
-
-      ![Nav](./assets/2310_Excercise3_1_6.png){ width="200" }
-
-- Under "Entry Point Settings," you will notice that there is no routing flow mapped.
-
-- From the dropdown, select the flow "**WebexOne_OutdialUser[num]_Flow**" and fill in these fields:
-      - Music on hold: "defaultmusic_on_hold"
-      - Version label: Latest
-      - Outdial Queue: Select the queue that was created in step 1 of your initial setup.
-
-      ![Nav](./assets/2310_Excercise3_1_6.1.png){ width="800" }
 
 - Save the settings.
 
