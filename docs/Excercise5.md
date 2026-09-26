@@ -121,7 +121,7 @@ By completing this module, participants will be able to:
 
 - To understand how to evaluate AI Routing performance in a real-world deployment, refer to the pre-populated production report screenshot below:
 
-      ![Nav](./assets/21177_Excercise5_3.png){ width="500" }
+      ![Nav](./assets/21177_Excercise5_4.2.png){ width="500" }
 
 Key Metrics to Examine in the Dashboard:
 
