@@ -177,7 +177,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
 - Click Save to finalize the queue. <br>
 
 - It's time to now test the call. To do this, log in to the Agent Desktop using the provided credentials.<br>
-      - URL: https://desktop.wxcc-us1.cisco.com/
+      - URL:  <a href="https://desktop.wxcc-us1.cisco.com/" target="_blank">https://desktop.wxcc-us1.cisco.com/</a>
       - Username: **Contact the lab proctor if information is unavailable.**
       - Password: **Contact the lab proctor if information is unavailable.** <br>
 
