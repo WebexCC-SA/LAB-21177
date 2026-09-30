@@ -155,7 +155,6 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 	* `Agent Name`: The final agent who received the transferred call.
 
 **Observation**:
-
 - The **`Queue Name`** displays the correct queue
 
 - However the **`Agent Name`** which is the agent receiving the call after transfer still displays the original agent, indicating the transfer was unsuccessful.
@@ -182,16 +181,22 @@ To determine why the transfer failed and which component terminated the call, ad
 
 - Save the report and click **Preview**.
 
-- Search for your **Interaction ID** again and analyze the updated fields:
+- Search for your Interaction ID again and review the updated fields.
+  
+- Below is a detailed breakdown of what these fields reveal about the call
 	* **Terminated By (`System`):** The call was ended programmatically by the Webex Contact Center platform, rather than by the customer or agent.
 	* **Termination Type (`abandoned`):** The system classified the call leg as dropped before connecting to an agent following the transfer request.
 	* **Abandoned Type (`Queue`):** The call failed while waiting in the destination queue (`WebexOne_BlindTransfer_SGtoFlowQueue`).
 
-- The field results confirm that the blind transfer reached the destination queue, but no matching agent was found. 
+- The results confirm that the blind transfer reached the destination queue, but no matching agent was found. 
 
 - The system held the call in queue until the timeout threshold was reached, resulting in a system-initiated queue abandonment.
 
-- The underlying cause is a **Skill Carryover Conflict**. By default, when an agent performs a blind transfer, the system carries over the initial call's required skills (`Spanish >= 5`, `VIP = True`). Because the receiving agent in `WebexOne_Team_31` does not hold those exact matching attributes, no eligible agent is found.
+- The underlying cause is a **Skill Carryover Conflict**.
+  
+- By default, when an agent performs a blind transfer, the system carries over the initial call's required skills (`Spanish >= 5`, `VIP = True`).
+  
+- Because the receiving agent in `WebexOne_Team_31` does not hold those exact matching attributes, no eligible agent is found.
 
 ## Section 5: Identify Root Cause via Flow Debugger
 
