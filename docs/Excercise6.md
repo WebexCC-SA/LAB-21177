@@ -99,11 +99,13 @@ In this lab exercise, the audience will gain hands-on experience configuring WxC
 
 - Move to **Voice** section by clicking Next button (at the bottom of the screen) a couple of times.
 
-- Enable "**Outdial**".
-      - Select the newly create entrypoint as an "**Outdial Entry Point**".
-      - Select the preconfigured address book "**WebexOne_outdial_AddressBook**" as an "**Address Book**".
+- Enable "**Outdial**"
 
       ![Nav](./assets/2310_Excercise3_1_12.1.png){ width="700" }
+  
+- Select the newly create entrypoint as an "**Outdial Entry Point**".
+  
+- Select the preconfigured address book "**WebexOne_outdial_AddressBook**" as an "**Address Book**".
 
 - In **Voice Channel Options** below ensure that "Desktop" is enabled.
 
