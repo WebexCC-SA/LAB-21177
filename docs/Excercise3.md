@@ -139,7 +139,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - On the right side, click the kebab menu (three vertical dots) and select Copy to duplicate the flow.
 
-- Rename the flow to **WebexOne_Skill_Flow_Template_<id>**
+- Rename the flow to **WebexOne_Skill_Flow_Template_ID**
 
 - Validate and Publish the flow, then close the canvas.
 
@@ -230,7 +230,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Select the channel to open its configuration settings.
 
-- Under **Entry Point Settings**, navigate to the **Routing Flow** dropdown menu and select the published flow configured in the previous exercise **WebexOne_Skill_Flow_Template_<id>**.
+- Under **Entry Point Settings**, navigate to the **Routing Flow** dropdown menu and select the published flow configured in the previous exercise **WebexOne_Skill_Flow_Template_ID**.
 
 - Click **Save** to apply the changes.
 
@@ -243,7 +243,9 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 	- Username: Refer to your lab badge or contact your lab proctor.
 	- Password: Refer to your lab badge or contact your lab proctor.
 
-- On the login options screen, select Desktop as the telephony option, set the Team to **WebexOne_Team_[num]** and click Log In.
+- On the login options screen, select Desktop as the telephony option
+  
+- set the Team to **WebexOne_Team_[num]** and click Log In.
 
 - Ensure the agent state is set to Available in the top-right corner of the Agent Desktop.
 
@@ -253,7 +255,9 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 **Analyze Unexpected Routing Behavior via Flow Debugger**
 
-- Notice that the call is immediately offered to the agent. This behavior is incorrect based on our design.
+- Notice that the call is immediately offered to the agent.
+
+- This behavior is incorrect based on our design.
 
 - Expected Logic: 
 	- Selecting Option 1 assigns variables tagging the call as a Non-VIP customer.
@@ -276,13 +280,15 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Locate and expand the QueueContact node activity (this is where skill evaluation occurs).
 
-- Under Activity Inputs > Skills Logs, inspect the JSON trace. The payload highlights the skills enforced on the call:
+- Under Activity Inputs > Skills Logs, inspect the JSON trace.
+  
+- The payload highlights the skills enforced on the call:
 		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
 		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
 
       ![Nav](./assets/21177_Excercise2_1.png){ width="900" }
 
-- The root cause is, although the Set Variable node defines custom flow variables (Webexone_Spanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with static skill requirements (Spanish >= 5 and VIP = True).
+- The root cause is, although the Set Variable node defines custom flow variables (Webexone_Spanish_FV = 3 and Webexone_VIPCustomer_FV = False), the QueueContact node is configured with static skill requirements i.e. Spanish >= 5 and VIP = True.
 
 - Because the QueueContact node uses static values, the call is assigned to these hardcoded skills rather than using the dynamic flow variables defined in the Set Variable node.
 
