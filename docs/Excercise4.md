@@ -155,6 +155,7 @@ To troubleshoot a blind transfer failure, let's inspect two tools:
 	* `Agent Name`: The final agent who received the transferred call.
 
   **Observation:**
+  
 	- The **`Queue Name`** displays the correct queue
  	- However the **`Agent Name`** which is the agent receiving the call after transfer still displays the original agent, indicating the transfer was unsuccessful.
 
