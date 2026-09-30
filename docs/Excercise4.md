@@ -15,13 +15,16 @@ Please use the following credentials to connect to Control Hub and configure Web
 In this lab, you will explore how skill requirements attached to an inbound call behave when an agent performs a blind transfer directly to a skill-based queue.
 
 **Current Call Flow Scenario:**
-A customer calls in and selects **Option 0**. The call is routed to a logged-in agent matching the required skills. The agent then attempts a blind transfer to a pre-defined queue from the Agent Desktop. However, instead of connecting to an available agent in that queue, the call fails.
+	- A customer calls in and selects **Option 0**. 
+	- The call is routed to a logged-in agent matching the required skills. 
+	- The agent then attempts a blind transfer to a pre-defined queue from the Agent Desktop. 
+	- However, instead of connecting to an available agent in that queue, the call fails.
 
 **Task:**
-- **Troubleshoot the Failure:** Identify why the transferred call drops or fails to route.
-- **Apply Corrective Logic:** Troubleshoot the issue Update the contact flow to handle transferred skill attributes properly.
-- **Verify Call Completion:** Perform a successful blind transfer to an available agent.
-- **Build a Journey Report:** Create a custom Analyzer report that maps the complete end-to-end call lifecycle across Labs 2 and 3, displaying the exact skills associated with each call leg.
+	- **Troubleshoot the Failure:** Identify why the transferred call drops or fails to route.
+	- **Apply Corrective Logic:** Troubleshoot the issue Update the contact flow to handle transferred skill attributes properly.
+	- **Verify Call Completion:** Perform a successful blind transfer to an available agent.
+	- **Build a Journey Report:** Create a custom Analyzer report that maps the complete end-to-end call lifecycle across Labs 2 and 3, displaying the exact skills associated with each call leg.
 
 ## Section 1: Review the Transfer Queue Configuration
 
