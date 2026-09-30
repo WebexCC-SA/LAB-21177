@@ -104,11 +104,9 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** that does the following:
 
-      ![Nav](./assets/21177_Excercise2_0.png){ width="500" }
-
 * **Step 1:** An incoming call enters via the Entry Point and triggers the **Menu** node.
 
-      ![Nav](./assets/21177_Excercise2_0.png){ width="500" }
+      ![Nav](./assets/21177_Excercise2_0.png){ width="700" }
   
 * **Step 2:** The customer hears an IVR greeting and is prompted to make a selection:
 	* **Option 0:** Triggers a **Set Variable** node that assigns flow variable `Webexone_SPanish_FV = 5` and `Webexone_VIPCustomer_FV = True` to the call context.
