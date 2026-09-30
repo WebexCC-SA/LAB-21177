@@ -32,12 +32,11 @@ Although the lab design and configuration examples could be used as a reference,
 
 ## Lab Access
 
-From your workstation open an RDP (Remote Desktop) session to the following host named "wkst1":
+| <!-- -->         | <!-- -->         |
+| ---------------- | ---------------- |
+| `Control Hub URL`            | <a href="https://admin.webex.com" target="_blank">https://admin.webex.com</a> |
+| `WxCC Desktop URL`            | <a href="https://desktop.wxcc-us1.cisco.com/" target="_blank">https://desktop.wxcc-us1.cisco.com/</a> |
+| `Username`       | labuser**ID**@wx1.wbx.ai  _(where **ID** is your assigned pod number; this ID will be provided by your proctor)_ |
+| `Password`       | webexONE1! |
+| `ID`       | 01-10 | 11-20 | 21-30 |
 
-- IP: 1.2.3.4
-- Username: corp\demouser
-- Password: C1sco12345
-
-## Getting Started
-
-This lab leverages Cisco dCloud ...
