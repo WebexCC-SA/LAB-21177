@@ -38,5 +38,5 @@ Although the lab design and configuration examples could be used as a reference,
 | `WxCC Desktop URL`            | <a href="https://desktop.wxcc-us1.cisco.com/" target="_blank">https://desktop.wxcc-us1.cisco.com/</a> |
 | `Username`       | labuser**ID**@wx1.wbx.ai  _(where **ID** is your assigned pod number; this ID will be provided by your proctor)_ |
 | `Password`       | webexONE1! |
-| `ID`       | 01-10 | 11-20 | 21-30 |
+| `ID`       | 01-10 , 11-20 , 21-30 |
 
