@@ -248,7 +248,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - First, ensure that the agent is ready and make a call from your cell phone. 
 
-- When the call is presented to the agent, do not accept it. Let the call ring for 12 seconds until it goes to a "no answer" state. 
+- When the call is presented to the agent, do not accept it.
+
+- Let the call ring for 12 seconds until it goes to a "no answer" state. 
 
 - Hangup to disconnect the call.
 
@@ -256,9 +258,11 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - Next, make another call. 
 
-- This time, when the call is presented to the agent, reject the call. Disconnect call from your cell phone.
+- This time, when the call is presented to the agent, reject the call. 
 
       ![Nav](./assets/2310_Excercise1_3_2.png){ width="600" }
+
+- Make another call. While the agent's phone is ringing, disconnect the call from your cell phone
 
 - Now that you have a variety of calls in the system, you can explore the reports to see how to track "**Contact Offer**" and "**Assignment Failures**" to the agent.
 
@@ -295,7 +299,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - Save the visualizationand Click the "Preview" option.
 
-- You should now see counts for "RONA" and "Call Reject." Click on the value and the magnification symbol for a further drill-down of the number.
+- You should now see counts for "RONA" and "Call Reject."
+
+- Click on the value and the magnification symbol for a further drill-down of the number.
 
       ![Nav](./assets/2310_Excercise1_3_9.png){ width="1000" }
 
@@ -303,7 +309,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
       ![Nav](./assets/2310_Excercise1_3_11.png){ width="600" }
 
-- A new window will pop up with all the details of this call. As needed, you can add fields and measures from the available options to get all the desired information related to the call and the agent.
+- A new window will pop up with all the details of this call.
+
+- As needed, you can add fields and measures from the available options to get all the desired information related to the call and the agent.
 
       ![Nav](./assets/2310_Excercise1_3_10.png){ width="1000" }
 
