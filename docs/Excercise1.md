@@ -270,15 +270,15 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
       ![Nav](./assets/2310_Excercise1_3_3.png){ width="500" }
 
-- Click on "Visualization" and double-click the folder **WebexOne_Report_User[num]** containing your user details.
+- Search for the folder **WebexOne_Report_User_num** and click it to expand the dropdown menu.
 
-      ![Nav](./assets/2310_Excercise1_3_4.png){ width="500" }
+      ![Nav](./assets/2310_Excercise1_3_4_1.png){ width="500" }
 
 - There are two reports in the folder which are copy of the stock report: 
       - "**Agent Trace Report**" and 
       - "**Queue Activity By Queue Report**".
 
-      ![Nav](./assets/2310_Excercise1_3_5.png){ width="800" }
+      ![Nav](./assets/2310_Excercise1_3_5_1.png){ width="800" }
       
 - Each report includes three columns:
       - **RONA Count**: This captures all calls that failed because the configured RONA timer expired in WxCC (reasonCode: RONA_TIMER_EXPIRED) or  Because of a configured ring timeout on the device (reasonCode: NO_ANSWER_USER). 
@@ -287,7 +287,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - To review the "Agent Trace" report, first click on the "Edit" option 
 
-      ![Nav](./assets/2310_Excercise1_3_6.png){ width="700" }
+      ![Nav](./assets/2310_Excercise1_3_6_1.png){ width="700" }
 
 - Ensure that the start time of the report is set for "Today."
 
@@ -307,15 +307,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - To easily review the calls in the report, use the Custom Select option in Agent Name to search for the designated user and their calls
 
-      ![Nav](./assets/2310_Excercise1_3_11.png){ width="600" }
+      ![Nav](./assets/2310_Excercise1_3_11_1.png){ width="600" }
 
-- A new window will pop up with all the details of this call.
-
-- As needed, you can add fields and measures from the available options to get all the desired information related to the call and the agent.
-
-      ![Nav](./assets/2310_Excercise1_3_10.png){ width="1000" }
-
-- To test this, you can click on "Agent ID" and it will be appended to the end of the report as a new column.
+- The report will dynamically adjust to highlight the call details associated with that specific user.
 
 -  The same process can be used to explore the "**Queue Activity By Queue**" report.
 
