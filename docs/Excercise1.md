@@ -278,7 +278,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
       - "**Agent Trace Report**" and 
       - "**Queue Activity By Queue Report**".
 
-      ![Nav](./assets/2310_Excercise1_3_5_1.png){ width="800" }
+      ![Nav](./assets/2310_Excercise1_3_5_1.png){ width="500" }
       
 - Each report includes three columns:
       - **RONA Count**: This captures all calls that failed because the configured RONA timer expired in WxCC (reasonCode: RONA_TIMER_EXPIRED) or  Because of a configured ring timeout on the device (reasonCode: NO_ANSWER_USER). 
@@ -287,7 +287,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - To review the "Agent Trace" report, first click on the "Edit" option 
 
-      ![Nav](./assets/2310_Excercise1_3_6_1.png){ width="700" }
+      ![Nav](./assets/2310_Excercise1_3_6_1.png){ width="600" }
 
 - Ensure that the start time of the report is set for "Today."
 
@@ -307,7 +307,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - To easily review the calls in the report, use the Custom Select option in Agent Name to search for the designated user and their calls
 
-      ![Nav](./assets/2310_Excercise1_3_11_1.png){ width="600" }
+      ![Nav](./assets/2310_Excercise1_3_11_1.png){ width="400" }
 
 - The report will dynamically adjust to highlight the call details associated with that specific user.
 
