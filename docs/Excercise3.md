@@ -282,9 +282,9 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 - Under Activity Inputs > Skills Logs, inspect the JSON trace.
   
-- The payload highlights the skills enforced on the call:
-		- "skillName":"WebexOne__Spanish_Fluency","condition":"gte";"type":"proficiency","value":"5"
-		- "skillName":"WebexOne_VIP_Support","condition":"eq";"type":"boolean","value":"True"
+- The payload highlights the skills enforced on the call
+	- "**skillName**":"WebexOne__Spanish_Fluency","condition":"**gte**";"type":"proficiency","value":"5"
+ 	- "**skillName**":"WebexOne_VIP_Support","condition":"**eq**";"type":"boolean","value":"True"
 
       ![Nav](./assets/21177_Excercise2_1.png){ width="900" }
 
