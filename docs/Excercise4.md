@@ -52,7 +52,8 @@ In this lab, you will explore how skill requirements attached to an inbound call
 
 - Scroll to **Call Distribution**, click the **Edit (pencil)** icon under *Actions*, search for the team `WebexOne_Team_31`, and ensure it is added to the queue.
 
-**Note:** The team `WebexOne_Team_31` is assigned to the user `labuser31@wx1.wbx.ai`, who is currently logged in and set to **Available** on the proctor's workstation. 
+!!! Note
+	The team `WebexOne_Team_31` is assigned to the user `labuser31@wx1.wbx.ai`, who is currently logged in and set to **Available** on the proctor's workstation. 
 
 - Your goal in this exercise is to successfully transfer a call to the proctor.
 
