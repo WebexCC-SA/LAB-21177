@@ -104,6 +104,8 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** that does the following:
 
+      ![Nav](./assets/21177_Excercise2_1_0.png){ width="500" }
+
 * **Step 1:** An incoming call enters via the Entry Point and triggers the **Menu** node.
   
 * **Step 2:** The customer hears an IVR greeting and is prompted to make a selection:
@@ -111,8 +113,6 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 	* **Option 1:** Triggers a **Set Variable** node that assigns flow variable `Webexone_SPanish_FV = 3` and `Webexone_VIPCustomer_FV = False` to the call context.
 
 * **Step 3:** The call routes to the **Queue** node, where an appropriately skilled agent is selected based on the skill requirement conditions evaluated at the queue level.
-
-      ![Nav](./assets/21177_Excercise2_1_0.png){ width="500" }
 
 **Identify Required Flow Updates**
 
