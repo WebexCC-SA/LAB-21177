@@ -13,13 +13,13 @@ Please use the following credentials to connect to Control Hub and configure Web
 
 The objective of this self-paced lab is to provide participants with hands-on experience in configuring and debugging tenant call flows, as well as analyzing agent performance through call reports. This excercise has been divided into three sections
 
-- **Section 1**: Discover Tenant Call Flow Configuration:
+- **Discover Tenant Call Flow Configuration**:
 This section aims to familiarize participants with the existing call flow configurations within a tenant environment.
 
-- **Section 2**: Configure and Debug an Inbound Flow:
+- **Configure and Debug an Inbound Flow**:
 In this part, participants will set up an inbound flow with a whisper announcement and a "Team" and "Longest Available" distribution strategy. They will use the flow debugger to identify and resolve common misconfigurations encountered during the setup process.
 
-- **Section 3**: Analyze Agent Performance with Call Reports:
+- **Analyze Agent Performance with Call Reports**:
 After creating the inbound flow and presenting calls to a test agent, participants will intentionally trigger specific events. They will reject one call and allow a second to result in a Re-Route on No Answer (RONA) event. This will enable them to explore and analyze call reports to understand agent behavior and pinpoint the root cause of the rejected and RONA calls.
 
 ## Section 1 : Discover Tenant Call Flow Configuration
@@ -70,7 +70,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
       ![Nav](./assets/2310_Excercise1_7.1.png){ width="300" }
 
-- Based on the observed calling connection (e.g., Cisco Calling Plan) and the information presented in the call flow slides, this configuration matches Flow Type 1.
+- Based on the observed calling connection (e.g., Cisco Calling Plan) and the information presented in the call flow slides, this configuration matches Flow discussed during the presentation.
 
 
 ## Section 2 : Configure and Debug an Inbound Flow
@@ -96,7 +96,7 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
       ![Nav](./assets/2310_Excercise1_2_4.png){ width="200" }
 
-- Choose the **WebexOne_AgentProfile** and verify that the "Voice Channel" options are configured as shown in the following screenshot.
+- Choose the **WebexOne_AgentProfile** and verify that the "Voice Channel options" are configured as shown in the following screenshot.
 
       ![Nav](./assets/2310_Excercise1_2_5.png){ width="700" }
 
