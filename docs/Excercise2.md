@@ -66,11 +66,11 @@ The task is to Update the flow so the call transfers seamlessly to the correct d
 
       ![Nav](./assets/2310_Excercise2_1_4_2.png){ width="700" }
   
-- This error represents the core of the problem, but why ? 
+- This error represents the root cause of the issue. Let's break down why this happens
 
       - Platform Restriction: Bridge Transfer nodes in Webex Contact Center Flow Designer cannot transfer calls to a Dialed Number (DN) that is already provisioned as an Entry Point Dialed Number (EP-DN).
-      - Routing Loop Prevention: Bridge Transfer is intended for offloading media to external destinations or 3rd-party IVRs via SIP trunks.
-      - The Loop: Transferring a call via Bridge Transfer to an EP-DN attempts to loop the call back into Webex Contact Center as a new inbound trigger, causing the Flow Designer engine to block the call with the UNSUPPORTED_DN error code.
+      - Routing Loop Prevention: Bridge Transfer is intended for offloading media to external destinations or third-party IVRs via SIP trunks. Transferring a call via Bridge Transfer to an EP-DN attempts to loop the call back into Webex Contact Center as a new inbound trigger, causing the routing logic to block the call with the UNSUPPORTED_DN error code.
+
   
 ## Section 3 : Correct the Flow 
 
