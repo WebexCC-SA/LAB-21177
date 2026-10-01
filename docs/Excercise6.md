@@ -122,7 +122,7 @@ In this lab exercise, the audience will gain hands-on experience configuring WxC
 ## Section 2 : Test Outdial 
 
 - Now, log in to the Agent Desktop using the provided credentials.
-      - **URL**: https://desktop.wxcc-us1.cisco.com/
+	- URL: [https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/)
       - **Username**: Contact the lab proctor if information is unavailable.
       - **Password**: Contact the lab proctor if information is unavailable.
 
@@ -256,7 +256,9 @@ Here are the browser logs / error details to analyze:
 
 - You will notice that the call passed through the "NewPhoneContact" node, and at QueueContact Node failed 
 
-- The failure occurs because an agent-initiated outdial call does not require a Queue Contact node. This is a common mistake made in the field, where inbound flow logic and nodes are incorrectly reused for outdial scenarios.
+- The failure occurs because an agent-initiated outdial call does not require a Queue Contact node.
+  
+- This is a common mistake made in the field, where inbound flow logic and nodes are incorrectly reused for outdial scenarios.
 
 - To correct this, come back into the Design section of the flow and click on the "Edit" option in the flow.
 
