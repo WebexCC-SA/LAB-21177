@@ -114,9 +114,7 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 
 * **Step 3:** The call routes to the **Queue** node, where an appropriately skilled agent is selected based on the skill requirement conditions evaluated at the queue level.
 
-**Identify Required Flow Updates**
-
-- To test Skill-Based Routing (SBR) with this flow, lets make the following changes:
+- To test Skill-Based Routing (SBR) with this flow, lets configure following steps:
 
 	- **Update 1**: **Clone the Flow**
 	- **Update 2**: **Queue Assignment:** Assign the designated Contact Center queue to the **Queue** node.
