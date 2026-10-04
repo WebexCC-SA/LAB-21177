@@ -21,7 +21,7 @@ Current Call Flow & Problem is as follows
       
 - **Second Leg**: In this new flow, the customer must select the User ID option to reach the correct team and agent.
       
-- **Core Issue**: The transfer currently fails. The customer experiences dead air, and the call drops.
+- **Core Issue**: The transfer fails. The customer experiences dead air, and the call drops.
 
 The task is to Update the flow so the call transfers seamlessly to the correct destination while preserving and passing all original flow variables to the receiving agent.
 
