@@ -63,7 +63,7 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 - In **Contact Center**, go to **User Management** > **Skill Profile**.
 
-- Locate `WebexOne_Spanish_Specialist` in the **Skill Profiles** list.
+- Locate `WebexOne_VIP_Specialist` in the **Skill Profiles** list.
 
 - Select its row to open the configuration details panel.
 
@@ -90,7 +90,7 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 - Select the user row to open the user details side panel.
 
-- Go to the **Agent Settings** section and select `WebexOne_Spanish_Specialist` from the **Skill profile** drop-down menu.
+- Go to the **Agent Settings** section and select `WebexOne_VIP_Specialist` from the **Skill profile** drop-down menu.
 
 - Select **Save** to apply your changes.
 
@@ -98,7 +98,7 @@ A **Skill Profile** acts as a container grouping multiple skills together so you
 
 - Re-open the user details panel for `labuser<num>@wx1.wbx.ai`.
 
-- Under **Skill profile Settings**, confirm that the **Skill Profile** field explicitly displays `WebexOne_Spanish_Specialist`.
+- Under **Skill profile Settings**, confirm that the **Skill Profile** field explicitly displays `WebexOne_VIP_Specialist`.
 
 ## Section 2 : Implement Skill-Based Routing (SBR) in Flow 
 
