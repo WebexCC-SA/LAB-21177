@@ -111,7 +111,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
       ![Nav](./assets/2310_Excercise1_2_7.png){ width="700" }
 
-- Now, let's start building the entry point for the external call. To do this, navigate to "Customer Experience" and select "Channels."
+- Now, let's start building the entry point for the external call.
+  
+- To do this, navigate to "Customer Experience" and select "Channels."
 
       ![Nav](./assets/2310_Excercise1_2_8.png){ width="200" }
 
@@ -189,7 +191,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
 - However, you will notice the call is never presented to the agent, and the caller hears music on hold.<br>
 
-- Let's troubleshoot to see why the call is not reaching the agent. The best way will be to look at the flow to see what is happening with the call. <br>
+- Let's troubleshoot to see why the call is not reaching the agent.
+  
+- The best way will be to look at the flow to see what is happening with the call. <br>
 
 - In the browser tab/window containing Contact Center navigation pane select "Flows" under customer experience section and search for the flow you have mapped to the entry point, **WebexOne_Flow_[num]**
 
@@ -262,7 +266,9 @@ After creating the inbound flow and presenting calls to a test agent, participan
 
       ![Nav](./assets/2310_Excercise1_3_2.png){ width="600" }
 
-- Make another call. While the agent's phone is ringing, disconnect the call from your cell phone
+- Make another call.
+
+- While the agent's phone is ringing, disconnect the call from your cell phone
 
 - Now that you have a variety of calls in the system, you can explore the reports to see how to track "**Contact Offer**" and "**Assignment Failures**" to the agent.
 
