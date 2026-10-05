@@ -1,5 +1,3 @@
-### **Workshop Conclusion**
-
 **Thank you all for your active participation and great engagement throughout this hands-on workshop!**
 
 Through this session, you have successfully built, optimized, and debugged core voice workflows and advanced routing models in Webex Contact Center (WxCC).
