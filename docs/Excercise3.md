@@ -189,13 +189,13 @@ For this lab, we have a pre-built flow named **WebexOne_Skill_Flow_Template** th
 </video>
 </details>
 
-- Return to **Flows** section  and click your newly created flow row **WebexOne_Skill_Flow_Template_<id>** to open it in **Flow Designer**.
+- Return to **Flows** section  and click your newly created flow row **WebexOne_Skill_Flow_Template_ID** to open it in **Flow Designer**.
 
 - Click **Edit**  to modify the flow.
 
 - Click the **Queue Contact** node on the canvas to open its properties panel.
 
-- Under **Queue Settings**, select **Static Queue** and choose your newly created queue: `WebexOne_SBR_Queue_[name]`.
+- Under **Queue Settings**, select **Static Queue** and choose your newly created queue: `WebexOne_SBR_Queue_ID`.
 
 - Under the **Skill Requirements** section, click **Add Skill** and configure the two static skill requirements:
 
